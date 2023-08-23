@@ -1,26 +1,24 @@
 @import url(reset.css);
 
 :root {
-    --background-color1: #111;
-    --background-color2: #222;
-    --background-color3: #333;
-    --background-color4: #666;
+    --background-transparent-color1: rgba(17, 17, 17, 0.6);
+    --background-transparent-color2: rgba(59, 59, 59, 0.3);
+    --background-transparent-color3: rgba(51, 51, 51, 0.3);
 
-    --text-color1: #c9cacc;
-    --text-color2: #57cc8a;
-    --text-color3: #828384;
-    --text-color4: #92b7b7;
-    --text-color5: #f4f4f4;
-    --text-color6: #cc7e57;
+    --border-color-light1: rgba(255, 255, 255, 0.2);
+
+    --font-color-white: #c9cacc;
+    --font-color-orange: #cc7e57;
+    --font-color-green: #57cc8a;
+    --font-color-green: #92b7b7;
+    --font-color-gray: #828384;
 
     --icon-color: #ffffff;
-    --icon-color2: #c5c5c5;
-
     --link-active: #cf361f;
 }
 
 body {
-    background: var(--background-color1);
+    background: url(@/assets/backround.webp);
     font-family: "Menlo", "Meslo LG", monospace;
     font-size: 14px;
 }
@@ -29,16 +27,11 @@ body {
     max-width: 60rem;
     margin: 0 auto;
     padding: 0 2rem;
-    background: var(--background-color1);
-    color: var(--text-color1);
+    color: var(--font-color-white)
 }
 
 a {
-    color: var(--text-color4);
-    transition: color .35s;
-}
-a:hover {
-    color: var(--text-color1);
+    color: var(--font-color-green);
 }
 
 hr {
@@ -49,7 +42,7 @@ hr {
 
 .title {
     font-size: 25px;
-    color: var(--text-color6);
+    color: var(--font-color-orange);
 }
 
 code {

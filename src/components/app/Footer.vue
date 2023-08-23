@@ -21,8 +21,9 @@ export default {
     margin-top: auto;
     &__copyright {
         font-weight: 100;
-        color: var(--text-color3);
+        color: var(--font-color-gray);
         margin-bottom: 20px;
+        opacity: 0.6;
     }
 }
 </style>

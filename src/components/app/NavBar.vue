@@ -62,12 +62,12 @@ i {
         border-radius: 5px;
         padding: 0 10px;
         &:hover {
-            background: var(--background-color2);
+            background: var(--background-transparent-color2);
             transition: background .25s;
         }
     }
     &__icon {
-        color: var(--icon-color2);
+        color: var(--icon-color);
     }
     &__name {
         font-size: 15px;

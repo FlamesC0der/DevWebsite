@@ -11,7 +11,7 @@
 import {useStore} from "vuex";
 import {computed} from 'vue';
 import Project from '@/components/Project.vue'
-import Button from '@/components/Button.vue'
+import Button from '@/components/common/Button.vue'
 export default {
     setup() {
         const store = useStore();
@@ -36,8 +36,11 @@ export default {
     margin-bottom: 1rem;
     display: grid;
     gap: 1rem;
+    background: var(--background-transparent-color1);
+    border-radius: 15px;
+    padding: 10px;
     &__projects__more {
-        background: var(--background-color2);
+        background: var(--background-transparent-color2);
         border-radius: 15px;
         min-height: 50px;
         padding: 10px 15px;

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Button from '@/components/Button.vue'
+import Button from '@/components/common/Button.vue'
 export default {
   components: {
     Button
@@ -38,7 +38,7 @@ export default {
 .project {
   display: flex;
   flex-direction: row;
-  background: var(--background-color2);
+  background: var(--background-transparent-color2);
   border-radius: 15px;
   min-height: 10rem;
   padding: 10px 15px;

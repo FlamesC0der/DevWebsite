@@ -121,6 +121,9 @@ export default {
 <style lang="scss" scoped>
 .projectdetail {
     margin-bottom: 1rem;
+    background: var(--background-transparent-color1);
+    border-radius: 15px;
+    padding: 10px;
     &__path {
         margin: 20px 0;
         padding: 10px;
@@ -130,12 +133,12 @@ export default {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    border: 2px solid var(--background-color2);
+    border: 2px solid var(--background-transparent-color2);
     border-radius: 15px;
     line-height: 20px;
     padding: 10px;
     margin: 10px 0;
-    color: var(--text-color1);
+    color: var(--font-color-white);
     &__size {
         margin-left: auto;
     }
@@ -144,24 +147,24 @@ export default {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    border: 2px solid var(--background-color2);
+    border: 2px solid var(--background-transparent-color2);
     border-radius: 15px;
     line-height: 20px;
     padding: 10px;
     margin: 10px 0;
-    color: var(--text-color1);
+    color: var(--font-color-white);
 }
 .readme {
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--background-color2);
+    border: 2px solid var(--background-transparent-color2);
     border-radius: 15px;
     &__header {
         display: flex;
         flex-direction: row;
         gap: 10px;
         padding: 10px;
-        border-bottom: 2px solid var(--background-color2);
+        border-bottom: 2px solid var(--background-transparent-color2);
         line-height: 20px;
     }
     &__readme {
@@ -175,10 +178,10 @@ export default {
         font-size: 2rem;
     }
     &__subtitle {
-        color: var(--text-color3);
+        color: var(--font-color-gray);
     }
     &__link {
-        color: var(--text-color2);
+        color: var(--font-color-green);
         transition: color .35s;
         text-decoration: none;
     }

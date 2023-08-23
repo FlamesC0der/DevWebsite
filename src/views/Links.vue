@@ -9,7 +9,7 @@
 <script>
 import {useStore} from "vuex";
 import {computed} from 'vue';
-import Button from '@/components/Button.vue'
+import Button from '@/components/common/Button.vue'
 export default {
     setup() {
         const store = useStore();
@@ -31,6 +31,9 @@ export default {
 <style lang="scss" scoped>
 .links {
     margin-bottom: 1rem;
+    background: var(--background-transparent-color1);
+    border-radius: 15px;
+    padding: 10px;
     &__title {
         margin: 10px 0;
     }

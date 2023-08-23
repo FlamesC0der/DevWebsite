@@ -63,7 +63,7 @@ export default {
     gap: 5px;
     align-items: center;
     margin-left: auto;
-    border: 1px solid var(--background-color3);
+    border: 1px solid var(--border-color-light1);
     border-radius: 5px;
     min-width: 110px;
 }
@@ -86,10 +86,11 @@ i {
     right: 0;
     top: 42px;
     width: 100%;
-    background: var(--background-color3);
+    background: var(--border-color-light1);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: rgba(51, 51, 51, 0.9);
+    background-color: var(--background-transparent-color3);
+    border: 2px solid var(--border-color-light1);
 }
 .items div {
     display: flex;

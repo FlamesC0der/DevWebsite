@@ -17,14 +17,17 @@ export default {
     margin-bottom: 1rem;
     text-align: center;
     line-height: 3rem;
+    background: var(--background-transparent-color1);
+    border-radius: 15px;
+    padding: 10px;
     &__title {
-        font-size: 2rem;
+        font-size: 2rem;;
     }
     &__subtitle {
-        color: var(--text-color3);
+        color: var(--font-color-gray);
     }
     &__link {
-        color: var(--text-color2);
+        color: var(--font-color-green);
         transition: color .35s;
         text-decoration: none;
     }

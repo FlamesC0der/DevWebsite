@@ -20,7 +20,7 @@ export default {
     margin: 0 auto 1rem;
     width: 100%;
     line-height: 3rem;
-    border: 2px solid var(--background-color2);
+    border: 2px solid var(--border-color-light1);
     border-radius: 15px;
 }
 </style>
