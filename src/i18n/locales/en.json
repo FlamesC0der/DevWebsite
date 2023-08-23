@@ -1,0 +1,34 @@
+{
+    "nav": {
+        "home": "home",
+        "about": "about",
+        "links": "links",
+        "projects": "projects",
+        "archive": "archive"
+    },
+    "about": {
+        "about_me": "About me",
+        "about_me1": "I am Alexey and I'm python/javaScript developer",
+        "about_me2": "👀 Interested in chatbots, websites...",
+        "about_me3": "⚡️ In my free time I solve problems with my programs",
+        "about_me4": "💻 Learning Python, Javascript(vue)",
+        "about_web1": "About website",
+        "about_web2": "This website was written using \"vuejs\"",
+        "about_web3": "Below you can see what it is made of"
+    },
+    "links": {
+        "links_title": "Links to my different profiles"
+    },
+    "projects": {
+        "more": "More projects on my github",
+        "about": "about",
+        "github": "Github",
+        "source": "Source code",
+        "discord-bot-template": "Basic multifunctional discord bot template on python."
+    },
+    "404": {
+        "title": "404 NOT FOUND",
+        "subtitle": "Unfortunately, the page you requested cannot be found.",
+        "link": "Go home"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "nav": {
+        "home": "ホーム",
+        "about": "about",
+        "links": "リンク",
+        "projects": "プロジェクト",
+        "archive": "アーカイブ"
+    },
+    "about": {
+        "about_me": "私について",
+        "about_me1": "私はAlexeyで、python / javacript開発者です",
+        "about_me2": "👀 私はチャットボット、ウェブサイトに興味があります...",
+        "about_me3": "⚡️ 自由な時間にプログラムの問題を解決します",
+        "about_me4": "💻 Pythonの学習、Javascript ( vue )",
+        "about_web1": "ウェブサイトに関する",
+        "about_web2": "このウェブサイトは「vuejs」を使用して書かれました",
+        "about_web3": "以下に、それが何でできているかを示します"
+    },
+    "links": {
+        "links_title": "私のさまざまなプロフィールへのリンク"
+    },
+    "projects": {
+        "more": "私のgithubでより多くのプロジェクト",
+        "about": "about",
+        "github": "Github",
+        "source": "ソースコード",
+        "discord-bot-template": "Python 上の基本的な多機能 Discord ボット テンプレート。"
+    },
+    "404": {
+        "title": "404 NOT FOUND",
+        "subtitle": "残念ながら、リクエストしたページは見つかりません。",
+        "link": "ホームページ"
+    }
+}
