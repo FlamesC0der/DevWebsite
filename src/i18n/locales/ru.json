@@ -3,8 +3,7 @@
         "home": "Главная",
         "about": "Кто я?",
         "links": "Ссылки",
-        "projects": "Проекты",
-        "archive": "архив"
+        "projects": "Проекты"
     },
     "about": {
         "about_me": "Обо мне",
@@ -21,8 +20,6 @@
     },
     "projects": {
         "more": "Больше проектов на моём github",
-        "about": "О проекте",
-        "github": "Github",
         "source": "Исходный код",
         "discord-bot-template": "Базовый шаблон discord-бота на python."
     },

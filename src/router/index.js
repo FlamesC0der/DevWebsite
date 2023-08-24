@@ -25,20 +25,9 @@ const router = createRouter({
     },
     {
       path: '/projects',
-      children: [
-        {
-          path: '',
-          name: 'Projects',
-          component: () => import('@/views/Projects.vue'),
-          meta: {title: 'Projects · FlamesCoder', index: 4},
-        },
-        {
-          path: ':name',
-          component: () => import('@/views/ProjectDetail.vue'),
-          name: 'ProjectDetail',
-          meta: {title: 'Project · FlamesCoder', index: 4},
-        },
-      ]
+      name: 'Projects',
+      component: () => import('@/views/Projects.vue'),
+      meta: {title: 'Projects · FlamesCoder', index: 4},
     },
     {
       path: '/:pathMatch(.*)*',

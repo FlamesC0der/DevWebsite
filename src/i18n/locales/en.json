@@ -3,8 +3,7 @@
         "home": "home",
         "about": "about",
         "links": "links",
-        "projects": "projects",
-        "archive": "archive"
+        "projects": "projects"
     },
     "about": {
         "about_me": "About me",
@@ -21,8 +20,6 @@
     },
     "projects": {
         "more": "More projects on my github",
-        "about": "about",
-        "github": "Github",
         "source": "Source code",
         "discord-bot-template": "Basic multifunctional discord bot template on python."
     },

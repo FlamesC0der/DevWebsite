@@ -13,15 +13,18 @@
 
 <script>
 import { useI18n } from 'vue-i18n'
-import { useStore } from "vuex";
-import { computed } from 'vue';
 import Tr from "@/i18n/translation"
 import CountryFlag from 'vue-country-flag-next'
 export default {
     data() {
         return {
             open: false,
-            selected: null
+            selected: null,
+            langs: [
+                {lang: "ru", text: "Русский", country: "ru"},
+                {lang: "en", text: "English", country: "us"},
+                {lang: "ja", text: "日本語", country: "jp"},
+            ],
         }
     },
     setup() {
@@ -29,13 +32,7 @@ export default {
 
         const supportedLocales = Tr.supportedLocales
 
-        const store = useStore();
-
-        const langs = computed(function() {
-            return store.getters.langs
-        })
-
-        return {langs, locale, supportedLocales}
+        return {locale, supportedLocales}
     },
     methods: {
         switchLanguage(i) {

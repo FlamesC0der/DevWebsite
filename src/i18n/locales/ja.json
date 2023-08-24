@@ -3,8 +3,7 @@
         "home": "ホーム",
         "about": "about",
         "links": "リンク",
-        "projects": "プロジェクト",
-        "archive": "アーカイブ"
+        "projects": "プロジェクト"
     },
     "about": {
         "about_me": "私について",
@@ -21,8 +20,6 @@
     },
     "projects": {
         "more": "私のgithubでより多くのプロジェクト",
-        "about": "about",
-        "github": "Github",
         "source": "ソースコード",
         "discord-bot-template": "Python 上の基本的な多機能 Discord ボット テンプレート。"
     },

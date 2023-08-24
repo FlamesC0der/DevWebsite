@@ -9,16 +9,12 @@
   },
   "dependencies": {
     "@intlify/unplugin-vue-i18n": "^0.12.3",
-    "axios": "^1.4.0",
     "bootstrap-icons": "^1.10.5",
-    "github-markdown-css": "^5.2.0",
     "vue": "^3.3.4",
     "vue-country-flag-next": "^2.3.2",
     "vue-i18n": "^9.2.2",
     "vue-router": "^4.2.4",
-    "vue3-highlightjs": "^1.0.5",
-    "vue3-markdown-it": "^1.0.10",
-    "vuex": "^4.0.2"
+    "vue3-highlightjs": "^1.0.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

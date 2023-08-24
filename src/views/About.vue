@@ -41,25 +41,35 @@
 </template>
 
 <script>
-import { useStore } from "vuex";
-import { computed } from 'vue';
 export default {
     data() {
         return {
-            code: null,
-            age: null
-        }
+            age: 300,
+            code: `{
+    "name": "dev-website",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
-    setup() {
-        const store = useStore();
-
-        let code = computed(function() {
-            return store.getters.Projectdependencies
-        })
-
-        return {
-            code
-        }
+    "dependencies": {
+        "@intlify/unplugin-vue-i18n": "^0.12.3",
+        "bootstrap-icons": "^1.10.5",
+        "vue": "^3.3.4",
+        "vue-country-flag-next": "^2.3.2",
+        "vue-i18n": "^9.2.2",
+        "vue-router": "^4.2.4",
+        "vue3-highlightjs": "^1.0.5",
+        "vuex": "^4.0.2"
+        },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.2.3",
+        "sass": "^1.66.1",
+        "vite": "^4.4.6"
+    }
+}`      }
     },
     methods: {
         calculateAge() {

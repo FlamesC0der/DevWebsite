@@ -11,23 +11,17 @@
 
 <script>
 import { RouterLink } from 'vue-router';
-import { useStore } from "vuex";
-import { computed } from 'vue';
 import LanguageSwitcher from '@/components/misc/LanguageSwitcher.vue';
 export default {
     data() {
         return {
-            open: false
-        }
-    },
-    setup() {
-        const store = useStore();
-
-        const navs = computed(function() {
-            return store.getters.navs
-        })
-        return {
-            navs
+            open: false,
+            navs: [
+                {icon: "bi-book", to: "/", text_key: "nav.home"},
+                {icon: "bi-file-person", to: "/about", text_key: "nav.about"},
+                {icon: "bi-person-lines-fill", to: "/links", text_key: "nav.links"},
+                {icon: "bi-grid-1x2", to: "/projects", text_key: "nav.projects"}
+            ]
         }
     },
     components: {
