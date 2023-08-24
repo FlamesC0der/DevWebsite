@@ -5,11 +5,7 @@
 </template>
 
 <script>
-import NavBar from '@/components/app/NavBar.vue'
 export default {
-    components: {
-        NavBar
-    }
 }
 </script>
 
@@ -19,10 +15,12 @@ export default {
     margin-bottom: 20px;
     width: 100%;
     margin-top: auto;
+    background: var(--background-transparent-color1);
+    border-radius: 15px;
     &__copyright {
         font-weight: 100;
-        color: var(--font-color-gray);
-        margin-bottom: 20px;
+        color: var(--font-color-white);
+        padding: 20px 0;
         opacity: 0.6;
     }
 }

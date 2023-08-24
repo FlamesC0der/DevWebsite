@@ -1,4 +1,4 @@
-import './assets/main.css'
+import './assets/main.scss'
 import 'highlight.js/styles/qtcreator_dark.css'
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
 

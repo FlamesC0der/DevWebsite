@@ -39,6 +39,7 @@ export default {
     background: var(--background-transparent-color1);
     border-radius: 15px;
     padding: 10px;
+    backdrop-filter: blur(5px);
     &__projects__more {
         background: var(--background-transparent-color2);
         border-radius: 15px;

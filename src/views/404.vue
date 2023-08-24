@@ -20,6 +20,7 @@ export default {
     background: var(--background-transparent-color1);
     border-radius: 15px;
     padding: 10px;
+    backdrop-filter: blur(5px);
     &__title {
         font-size: 2rem;;
     }

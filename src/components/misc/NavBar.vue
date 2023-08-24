@@ -13,7 +13,7 @@
 import { RouterLink } from 'vue-router';
 import { useStore } from "vuex";
 import { computed } from 'vue';
-import LanguageSwitcher from '@/components/app/LanguageSwitcher.vue';
+import LanguageSwitcher from '@/components/misc/LanguageSwitcher.vue';
 export default {
     data() {
         return {

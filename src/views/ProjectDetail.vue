@@ -124,6 +124,7 @@ export default {
     background: var(--background-transparent-color1);
     border-radius: 15px;
     padding: 10px;
+    backdrop-filter: blur(5px);
     &__path {
         margin: 20px 0;
         padding: 10px;

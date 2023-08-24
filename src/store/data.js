@@ -33,6 +33,7 @@ export default {
         "@intlify/unplugin-vue-i18n": "^0.12.3",
         "axios": "^1.4.0",
         "bootstrap-icons": "^1.10.5",
+        "github-markdown-css": "^5.2.0",
         "vue": "^3.3.4",
         "vue-country-flag-next": "^2.3.2",
         "vue-i18n": "^9.2.2",
@@ -43,6 +44,7 @@ export default {
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^4.2.3",
+        "sass": "^1.66.1",
         "vite": "^4.4.6"
     }
 }`,

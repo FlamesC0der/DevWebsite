@@ -1,4 +1,4 @@
-@import url(reset.css);
+@import url(reset.scss);
 
 :root {
     --background-transparent-color1: rgba(17, 17, 17, 0.6);
@@ -10,15 +10,22 @@
     --font-color-white: #c9cacc;
     --font-color-orange: #cc7e57;
     --font-color-green: #57cc8a;
-    --font-color-green: #92b7b7;
+    --font-color-blue: #92b7b7;
     --font-color-gray: #828384;
 
     --icon-color: #ffffff;
     --link-active: #cf361f;
 }
 
+html {
+    background: #000;
+}
+
 body {
-    background: url(@/assets/backround.webp);
+    background: url(@/assets/background.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: "Menlo", "Meslo LG", monospace;
     font-size: 14px;
 }
@@ -31,7 +38,7 @@ body {
 }
 
 a {
-    color: var(--font-color-green);
+    color: var(--font-color-blue);
 }
 
 hr {

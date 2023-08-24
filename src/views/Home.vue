@@ -68,6 +68,8 @@ export default {
     flex-direction: column;
     align-items: center;
     background: var(--background-transparent-color1);
+    backdrop-filter: blur(5px);
+    border: 2px solid var(--border-color-light1);
     border-radius: 15px;
     width: 100%;
     max-width: 40rem;

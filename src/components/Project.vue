@@ -51,6 +51,7 @@ export default {
   &__name {
     font-size: 24px;
     margin: 0 0 10px;
+    color: var(--font-color-orange);
   }
   &__description {
     margin: 0 0 10px;
