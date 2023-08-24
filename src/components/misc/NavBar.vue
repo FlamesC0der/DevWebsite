@@ -81,7 +81,7 @@ i {
     background: var(--link-active);
     width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     right: 0;
 }

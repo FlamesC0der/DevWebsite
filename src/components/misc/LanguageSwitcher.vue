@@ -64,6 +64,7 @@ export default {
 }
 i {
     font-size: 20px;
+    -webkit-text-stroke: 1px;
 }
 .selected {
     display: flex;

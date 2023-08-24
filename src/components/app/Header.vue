@@ -22,5 +22,6 @@ export default {
     line-height: 3rem;
     border: 2px solid var(--border-color-light1);
     border-radius: 15px;
+    background: var(--background-transparent-color3);
 }
 </style>
