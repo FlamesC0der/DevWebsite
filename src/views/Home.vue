@@ -8,24 +8,20 @@
     </section>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            time: new Date()
-        }
-    },
-    methods: {
-        timer() {
-            setInterval(() => {
-                this.time = new Date()
-            }, 1000)
-        },
-    },
-    beforeMount() {
-        this.timer()
-    }
+<script setup>
+import { ref, onBeforeMount } from 'vue'
+
+let time = ref(new Date())
+
+function timer() {
+    setInterval(() => {
+        time.value = new Date()
+    }, 1000)
 }
+
+onBeforeMount(() => {
+    timer()
+})
 </script>
 
 <style lang="scss" scoped>

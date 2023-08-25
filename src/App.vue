@@ -1,27 +1,19 @@
 <template>
     <div class="container">
         <Header />
-        <Suspense>
-            <RouterView v-slot="{ Component, route}">
-                <Transition :name="route.meta.transition" mode="out-in">
-                    <component :is="Component" />
-                </Transition>
-            </RouterView>
-        </Suspense>
+        <RouterView v-slot="{ Component, route}">
+            <Transition :name="route.meta.transition" mode="out-in">
+                <component :is="Component" />
+            </Transition>
+        </RouterView>
         <Footer />
     </div>
 </template>
 
-<script>
+<script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Header from '@/components/app/Header.vue'
 import Footer from '@/components/app/Footer.vue'
-export default {
-    components: {
-        Header,
-        Footer
-    }
-}
 </script>
 
 <style lang="scss" scoped>

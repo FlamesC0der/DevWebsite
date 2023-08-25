@@ -9,25 +9,18 @@
     <LanguageSwitcher />
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
 import { RouterLink } from 'vue-router';
 import LanguageSwitcher from '@/components/misc/LanguageSwitcher.vue';
-export default {
-    data() {
-        return {
-            open: false,
-            navs: [
-                {icon: "bi-book", to: "/", text_key: "nav.home"},
-                {icon: "bi-file-person", to: "/about", text_key: "nav.about"},
-                {icon: "bi-person-lines-fill", to: "/links", text_key: "nav.links"},
-                {icon: "bi-grid-1x2", to: "/projects", text_key: "nav.projects"}
-            ]
-        }
-    },
-    components: {
-        LanguageSwitcher
-    }
-}
+
+let open = ref(false)
+const navs = [
+    {icon: "bi-book", to: "/", text_key: "nav.home"},
+    {icon: "bi-file-person", to: "/about", text_key: "nav.about"},
+    {icon: "bi-person-lines-fill", to: "/links", text_key: "nav.links"},
+    {icon: "bi-grid-1x2", to: "/projects", text_key: "nav.projects"}
+]
 </script>
 
 <style lang="scss" scoped>

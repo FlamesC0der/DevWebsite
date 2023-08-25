@@ -1,48 +1,34 @@
 <template>
     <div class="switchLanguage" tabindex="-1" @blur="open = false">
         <div class="selected" :class="{open: open}" @click="open = !open">
-            <country-flag :country="this.langs.find(x => x.lang === locale).country" size='normal'/>{{ this.langs.find(x => x.lang === locale).text }}<i :class="[open ? 'bi-chevron-up' : 'bi-chevron-down']"></i>
+            <country-flag :country="langs.find(x => x.lang === locale).country" size='normal'/>{{ langs.find(x => x.lang === locale).text }}<i :class="[open ? 'bi-chevron-up' : 'bi-chevron-down']"></i>
         </div>
         <div class="items" :class="{selectHide: !open}">
             <div v-for="(option, i) of supportedLocales" :key="i" @click="switchLanguage(i)">
-                <country-flag :country="this.langs.find(x => x.lang === option).country" size='normal'/>{{ this.langs.find(x => x.lang === option).text }}
+                <country-flag :country="langs.find(x => x.lang === option).country" size='normal'/>{{ langs.find(x => x.lang === option).text }}
             </div>
         </div>
     </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Tr from "@/i18n/translation"
 import CountryFlag from 'vue-country-flag-next'
-export default {
-    data() {
-        return {
-            open: false,
-            selected: null,
-            langs: [
-                {lang: "ru", text: "Русский", country: "ru"},
-                {lang: "en", text: "English", country: "us"},
-                {lang: "ja", text: "日本語", country: "jp"},
-            ],
-        }
-    },
-    setup() {
-        const { t, locale } = useI18n()
 
-        const supportedLocales = Tr.supportedLocales
+let open = ref(false)
+const langs = [
+    {lang: "ru", text: "Русский", country: "ru"},
+    {lang: "en", text: "English", country: "us"},
+    {lang: "ja", text: "日本語", country: "jp"},
+]
+const { locale } = useI18n()
+const supportedLocales = Tr.supportedLocales
 
-        return {locale, supportedLocales}
-    },
-    methods: {
-        switchLanguage(i) {
-            Tr.switchLanguage(this.supportedLocales[i]);
-            this.open = false;
-        }
-    },
-    components: {
-        CountryFlag
-    }
+function switchLanguage(i) {
+    Tr.switchLanguage(supportedLocales[i]);
+    open.value = false;
 }
 </script>
 

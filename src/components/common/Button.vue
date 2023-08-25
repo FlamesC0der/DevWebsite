@@ -1,26 +1,24 @@
 <template>
   <button class="button">
-    <a class="button__link" :href="link">
+    <a class="button__link" :href="link" target="_blank">
       <i :class="logo"></i>
       {{ text }}
     </a>
   </button>
 </template>
 
-<script>
-export default {
-  props: {
-    text: {
-      type: String,
-    },
-    link: {
-      type: String,
-    },
-    logo: {
-      type: String,
-    }
+<script setup>
+const props = defineProps({
+  text: {
+    type: String,
   },
-}
+  link: {
+    type: String,
+  },
+  logo: {
+    type: String,
+  }
+})
 </script>
 
 <style lang="scss" scoped>

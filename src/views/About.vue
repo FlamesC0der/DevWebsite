@@ -40,12 +40,11 @@
     </section>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            age: 300,
-            code: `{
+<script setup>
+import { ref, onBeforeMount } from 'vue'
+
+let age = ref(300)
+const code = `{
     "name": "dev-website",
     "version": "1.0.0",
     "private": true,
@@ -61,27 +60,24 @@ export default {
         "vue-country-flag-next": "^2.3.2",
         "vue-i18n": "^9.2.2",
         "vue-router": "^4.2.4",
-        "vue3-highlightjs": "^1.0.5",
-        "vuex": "^4.0.2"
-        },
+        "vue3-highlightjs": "^1.0.5"
+    },
     "devDependencies": {
         "@vitejs/plugin-vue": "^4.2.3",
         "sass": "^1.66.1",
         "vite": "^4.4.6"
     }
-}`      }
-    },
-    methods: {
-        calculateAge() {
-            var ageDifMs = Date.now() - new Date('04/04/2008');
-            var ageDate = new Date(ageDifMs);
-            return Math.abs(ageDate.getUTCFullYear() - 1970)
-        }
-    },
-    beforeMount() {
-        this.age = this.calculateAge()
-    }
+}`
+
+function calculateAge() {
+    var ageDifMs = Date.now() - new Date('04/04/2008');
+    var ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970)
 }
+
+onBeforeMount(() => {
+    age.value = calculateAge()
+})
 </script>
 
 <style lang="scss" scoped>

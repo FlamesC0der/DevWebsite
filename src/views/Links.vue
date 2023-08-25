@@ -6,22 +6,14 @@
     </section>
 </template>
 
-<script>
+<script setup>
 import Button from '@/components/common/Button.vue'
-export default {
-    data() {
-        return {
-            links: [
-                {text: 'Github', link: 'https://github.com/FlamesC0der', logo: 'bi-github'},
-                {text: 'Discord', link: 'https://discord.gg/3wt8QRndjm', logo: 'bi-discord'},
-                {text: 'Telegram', link: 'https://t.me/FlameCoder0_0', logo: 'bi-telegram'}
-            ]
-        }
-    },
-    components: {
-        Button
-    }
-}
+
+const links = [
+    {text: 'Github', link: 'https://github.com/FlamesC0der', logo: 'bi-github'},
+    {text: 'Discord', link: 'https://discord.gg/3wt8QRndjm', logo: 'bi-discord'},
+    {text: 'Telegram', link: 'https://t.me/FlameCoder0_0', logo: 'bi-telegram'}
+]
 </script>
 
 <style lang="scss" scoped>

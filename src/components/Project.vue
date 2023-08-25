@@ -13,25 +13,21 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Button from '@/components/common/Button.vue'
-export default {
-  components: {
-    Button
+
+const props = defineProps({
+  name: {
+    type: String,
+    required: true
   },
-  props: {
-    name: {
-      type: String,
-      required: true
-    },
-    image: {
-      type: String
-    },
-    links: {
-      type: Array,
-    }
+  image: {
+    type: String,
   },
-}
+  links: {
+    type: Array,
+  }
+})
 </script>
 
 <style lang="scss" scoped>

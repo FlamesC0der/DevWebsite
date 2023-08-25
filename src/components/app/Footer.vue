@@ -4,9 +4,7 @@
     </footer>
 </template>
 
-<script>
-export default {
-}
+<script setup>
 </script>
 
 <style lang="scss" scoped>

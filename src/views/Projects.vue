@@ -7,27 +7,18 @@
     </main>
 </template>
 
-<script>
+<script setup>
 import Project from '@/components/Project.vue'
 import Button from '@/components/common/Button.vue'
-export default {
-    data() {
-        return {
-            projects: [
-                {
-                    name: 'discord-bot-template',
-                    links: [
-                        {text: 'source', link: 'https://github.com/FlamesC0der/discord-bot-template', logo: 'bi-github'},
-                    ],
-                },
-            ],
-        }
+
+const projects = [
+    {
+        name: 'discord-bot-template',
+        links: [
+            {text: 'source', link: 'https://github.com/FlamesC0der/discord-bot-template', logo: 'bi-github'},
+        ],
     },
-    components: {
-        Project,
-        Button
-    }
-}
+]
 </script>
 
 <style lang="scss" scoped>
