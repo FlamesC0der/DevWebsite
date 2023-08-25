@@ -35,7 +35,7 @@
         </ul>
         <hr>
         <h3 class="about_title title">{{ $t("about.about_web1") }}</h3>
-        <p>{{ $t("about.about_web2") }} <img width="15" src="https://github.com/devicons/devicon/raw/master/icons/vuejs/vuejs-original.svg"/></p>
+        <p>{{ $t("about.about_web2") }} <img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"></p>
         <p>{{ $t("about.about_web3") }}</p>
         <pre v-highlightjs><code class="json">{{ code }}</code></pre>
     </section>
