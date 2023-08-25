@@ -1,7 +1,7 @@
 <template>
     <div class="switchLanguage" tabindex="-1" @blur="open = false">
         <div class="selected" :class="{open: open}" @click="open = !open">
-            <i class="bi-globe"></i>{{ langs.find(x => x.lang === locale).text }}<i class="arrow" :class="[open ? 'bi-chevron-up' : 'bi-chevron-down']"></i>
+            <i class="bi-globe"></i>{{ langs.find(x => x.lang === locale).text }}<i class="arrow bi-chevron-down"></i>
         </div>
         <div class="items" :class="{selectHide: !open}">
             <div v-for="(option, i) of supportedLocales" :key="i" @click="switchLanguage(i)">
@@ -32,7 +32,7 @@ function switchLanguage(i) {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .switchLanguage {
     position: relative;
     display: flex;
@@ -49,6 +49,10 @@ i {
 }
 .arrow {
     -webkit-text-stroke: 1px;
+    transition: transform .3s;
+}
+.open .arrow {
+    transform: rotate(180deg);
 }
 .selected {
     display: flex;

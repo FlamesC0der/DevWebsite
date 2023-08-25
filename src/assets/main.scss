@@ -28,13 +28,25 @@ body {
     background-attachment: fixed;
     font-family: "Menlo", "Meslo LG", monospace;
     font-size: 14px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        background: #560aa269;
+        height: 6px;
+        width: 6px;
+    }
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #9d0a89;
+        border-radius: 8px;
+    }
 }
-
 #app {
     max-width: 60rem;
     margin: 0 auto;
     padding: 0 2rem;
-    color: var(--font-color-white)
+    color: var(--font-color-white);
 }
 
 a {
@@ -59,6 +71,7 @@ code {
 i {
     color: var(--icon-color);
 }
+
 img {
     user-select: none;
 }
