@@ -13,6 +13,7 @@ import NavBar from '@/components/misc/NavBar.vue'
     display: flex;
     flex-direction: row;
     margin: 0 auto 1rem;
+    padding: 0 10px;
     width: 100%;
     line-height: 3rem;
     border: 2px solid var(--border-color-light1);

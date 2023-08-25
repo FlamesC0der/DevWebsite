@@ -39,7 +39,7 @@ i {
 .nav {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 0.1rem;
     user-select: none;
     &__item {
         position: relative;

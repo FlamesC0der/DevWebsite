@@ -1,7 +1,7 @@
 <template>
     <div class="switchLanguage" tabindex="-1" @blur="open = false">
         <div class="selected" :class="{open: open}" @click="open = !open">
-            <country-flag :country="langs.find(x => x.lang === locale).country" size='normal'/>{{ langs.find(x => x.lang === locale).text }}<i :class="[open ? 'bi-chevron-up' : 'bi-chevron-down']"></i>
+            <i class="bi-globe"></i>{{ langs.find(x => x.lang === locale).text }}<i class="arrow" :class="[open ? 'bi-chevron-up' : 'bi-chevron-down']"></i>
         </div>
         <div class="items" :class="{selectHide: !open}">
             <div v-for="(option, i) of supportedLocales" :key="i" @click="switchLanguage(i)">
@@ -20,7 +20,7 @@ import CountryFlag from 'vue-country-flag-next'
 let open = ref(false)
 const langs = [
     {lang: "ru", text: "Русский", country: "ru"},
-    {lang: "en", text: "English", country: "us"},
+    {lang: "en", text: "English", country: "gb"},
     {lang: "ja", text: "日本語", country: "jp"},
 ]
 const { locale } = useI18n()
@@ -40,13 +40,14 @@ function switchLanguage(i) {
     gap: 5px;
     align-items: center;
     margin-left: auto;
-    border: 1px solid var(--border-color-light1);
     border-radius: 5px;
     min-width: 110px;
     max-height: 44px;
 }
 i {
     font-size: 20px;
+}
+.arrow {
     -webkit-text-stroke: 1px;
 }
 .selected {

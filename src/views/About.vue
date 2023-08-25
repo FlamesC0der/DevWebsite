@@ -16,20 +16,21 @@
         </ul>
         <hr>
         <ul class="list">
-            <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/chrome/chrome-original.svg"> Frontend</li>
+            <li class="list__item">Frontend</li>
             <ul class="list">
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"> Html/css/Javascript</li>
+                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"> Html/css</li>
+                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"> Javascript</li>
                 <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original.svg"> Jquery</li>
                 <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"> Vue 3</li>
                 <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original.svg"> Webpack</li>
                 <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"> Sass/Scss</li>
                 <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"> Node.js</li>
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"> Git</li>
             </ul>
             <li class="list__item">Other</li>
             <ul class="list">
                 <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"> Python</li>
                 <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/lua/lua-original.svg"> Lua</li>
+                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"> Git</li>
             </ul>
         </ul>
         <hr>
