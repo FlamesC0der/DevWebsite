@@ -37,7 +37,7 @@
         <h3 class="about_title title">{{ $t("about.about_web1") }}</h3>
         <p>{{ $t("about.about_web2") }} <img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"></p>
         <p>{{ $t("about.about_web3") }}</p>
-        <pre v-highlightjs><code class="json">{{ code }}</code></pre>
+        <highlightjs language="json" :code="code"/>
     </section>
 </template>
 
@@ -46,28 +46,28 @@ import { ref, onBeforeMount } from 'vue'
 
 let age = ref(300)
 const code = `{
-    "name": "dev-website",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview"
-    },
-    "dependencies": {
-        "@intlify/unplugin-vue-i18n": "^0.12.3",
-        "bootstrap-icons": "^1.10.5",
-        "vue": "^3.3.4",
-        "vue-country-flag-next": "^2.3.2",
-        "vue-i18n": "^9.2.2",
-        "vue-router": "^4.2.4",
-        "vue3-highlightjs": "^1.0.5"
-    },
-    "devDependencies": {
-        "@vitejs/plugin-vue": "^4.2.3",
-        "sass": "^1.66.1",
-        "vite": "^4.4.6"
-    }
+  "name": "dev-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "@intlify/unplugin-vue-i18n": "^0.12.3",
+    "bootstrap-icons": "^1.10.5",
+    "vue": "^3.3.4",
+    "vue-country-flag-next": "^2.3.2",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "sass": "^1.66.1",
+    "vite": "^4.4.6"
+  }
 }`
 
 function calculateAge() {
@@ -125,10 +125,5 @@ p {
             margin-left: -1em;
         }
     }
-}
-pre,
-code {
-    background: var(--background-transparent-color1);
-    border-radius: 15px;
 }
 </style>

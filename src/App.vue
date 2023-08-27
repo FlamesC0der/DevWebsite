@@ -11,9 +11,20 @@
 </template>
 
 <script setup>
+import { onBeforeMount } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import Header from '@/components/app/Header.vue'
 import Footer from '@/components/app/Footer.vue'
+
+const images = [
+    'https://i.imgur.com/awNMIK7.gif',
+    'https://i.imgur.com/JGsO7rv.jpeg',
+    'https://i.imgur.com/KD7KFAF.gif',
+]
+onBeforeMount(async () => {
+    await console.image(images[Math.floor(Math.random() * images.length)])
+    console.log(`%c👆Refresh page to see another one of ${images.length} random image`, 'font-size: 14px; color:  #d20eb8;')
+})
 </script>
 
 <style lang="scss" scoped>

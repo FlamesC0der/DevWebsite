@@ -14,7 +14,7 @@
     --font-color-gray: #828384;
 
     --icon-color: #ffffff;
-    --link-active: #cf361f;
+    --link-active: #d20eb8;
 }
 
 html {
@@ -64,8 +64,13 @@ hr {
     color: var(--font-color-orange);
 }
 
+pre,
 code {
-    line-height: 20px;
+    background: var(--background-transparent-color1) !important;
+    border-radius: 15px !important;
+}
+code {
+    line-height: 20px !important;
 }
 
 i {
