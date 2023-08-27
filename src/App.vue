@@ -20,10 +20,11 @@ const images = [
     'https://i.imgur.com/awNMIK7.gif',
     'https://i.imgur.com/JGsO7rv.jpeg',
     'https://i.imgur.com/KD7KFAF.gif',
+    'https://i.imgur.com/WsUV4DK.gif',
 ]
 onBeforeMount(async () => {
     await console.image(images[Math.floor(Math.random() * images.length)])
-    console.log(`%c👆Refresh page to see another one of ${images.length} random image`, 'font-size: 14px; color:  #d20eb8;')
+    console.log(`%c👆Refresh page to see another one of ${images.length} random images`, 'font-size: 14px; color:  #d20eb8;')
 })
 </script>
 
