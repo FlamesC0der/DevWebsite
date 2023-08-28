@@ -15,7 +15,7 @@ import hljsVuePlugin from "@highlightjs/vue-plugin";
 hljs.registerLanguage('json', json);
 
 console.image = function(src) {
-    return new Promise(p => {
+    return new Promise((resolve) => {
         const reader = new FileReader();
         reader.addEventListener("load", function() {
             const img = new Image;
@@ -39,7 +39,7 @@ console.image = function(src) {
                     `background-image: url(${reader.result});`
                 ].join(" ");
                 console.log("%c ", styles)
-                p(null)
+                resolve(null)
             };
             img.src = reader.result;
         }, !1),

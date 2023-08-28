@@ -2,9 +2,9 @@
 import Button from '@/components/common/Button.vue'
 
 const links = [
-    {text: 'Github', link: 'https://github.com/FlamesC0der', logo: 'bi-github'},
-    {text: 'Discord', link: 'https://discord.gg/3wt8QRndjm', logo: 'bi-discord'},
-    {text: 'Telegram', link: 'https://t.me/FlameCoder0_0', logo: 'bi-telegram'}
+    {text: 'Github', link: 'links/github', logo: 'bi-github'},
+    {text: 'Discord', link: 'links/discord', logo: 'bi-discord'},
+    {text: 'Telegram', link: 'links/telegram', logo: 'bi-telegram'}
 ]
 </script>
 

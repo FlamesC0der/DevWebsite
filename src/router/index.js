@@ -19,15 +19,57 @@ const router = createRouter({
     },
     {
       path: '/links',
-      name: 'Links',
       meta: {title: 'Links · FlamesCoder', index: 3},
-      component: () => import('@/views/Links.vue')
+      children: [
+        {
+          path: '',
+          name: 'Links',
+          component: () => import('@/views/Links.vue'),
+        },
+        {
+          path: 'github',
+          name: 'Github',
+          component: () => import('@/views/Links.vue'),
+          beforeEnter(to, from, next) {
+            window.location.href = "https://github.com/FlamesC0der";
+          }
+        },
+        {
+          path: 'discord',
+          name: 'Discord',
+          component: () => import('@/views/Links.vue'),
+          beforeEnter(to, from, next) {
+            window.location.href = "https://discord.gg/3wt8QRndjm";
+          }
+        },
+        {
+          path: 'telegram',
+          name: 'Telegram',
+          component: () => import('@/views/Links.vue'),
+          beforeEnter(to, from, next) {
+            window.location.href = "https://t.me/FlameCoder0_0";
+          }
+        }
+      ]
     },
     {
       path: '/projects',
-      name: 'Projects',
-      component: () => import('@/views/Projects.vue'),
       meta: {title: 'Projects · FlamesCoder', index: 4},
+      children: [
+        {
+          path: '',
+          name: 'Projects',
+          component: () => import('@/views/Projects.vue'),
+        },
+        {
+          path: 'discord-bot-template',
+          name: 'discord-bot-template',
+          component: () => import('@/views/Projects.vue'),
+          beforeEnter(to, from, next) {
+            window.location.href = "https://github.com/FlamesC0der/discord-bot-template";
+          }
+        }
+      ]
     },
     {
       path: '/:pathMatch(.*)*',

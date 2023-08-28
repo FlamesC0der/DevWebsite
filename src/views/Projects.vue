@@ -6,7 +6,7 @@ const projects = [
     {
         name: 'discord-bot-template',
         links: [
-            {text: 'source', link: 'https://github.com/FlamesC0der/discord-bot-template', logo: 'bi-github'},
+            {text: 'source', link: 'projects/discord-bot-template', logo: 'bi-github'},
         ],
     },
 ]

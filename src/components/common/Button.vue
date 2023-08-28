@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink, RouterView } from 'vue-router'
 const props = defineProps({
   text: {
     type: String,
@@ -14,10 +15,10 @@ const props = defineProps({
 
 <template>
   <button class="button">
-    <a class="button__link" :href="link" target="_blank">
+    <RouterLink class="button__link" :to="link">
       <i :class="logo"></i>
       {{ text }}
-    </a>
+    </RouterLink>
   </button>
 </template>
 
