@@ -1,16 +1,3 @@
-<template>
-    <div class="switchLanguage" tabindex="-1" @blur="open = false">
-        <div class="selected" :class="{open: open}" @click="open = !open">
-            <i class="bi-globe"></i>{{ langs.find(x => x.lang === locale).text }}<i class="arrow bi-chevron-down"></i>
-        </div>
-        <div class="items" :class="{selectHide: !open}">
-            <div v-for="(option, i) of supportedLocales" :key="i" @click="switchLanguage(i)">
-                <country-flag :country="langs.find(x => x.lang === option).country" size='normal'/>{{ langs.find(x => x.lang === option).text }}
-            </div>
-        </div>
-    </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -31,6 +18,19 @@ function switchLanguage(i) {
     open.value = false;
 }
 </script>
+
+<template>
+    <div class="switchLanguage" tabindex="-1" @blur="open = false">
+        <div class="selected" :class="{open: open}" @click="open = !open">
+            <i class="bi-globe"></i>{{ langs.find(x => x.lang === locale).text }}<i class="arrow bi-chevron-down"></i>
+        </div>
+        <div class="items" :class="{selectHide: !open}">
+            <div v-for="(option, i) of supportedLocales" :key="i" @click="switchLanguage(i)">
+                <country-flag :country="langs.find(x => x.lang === option).country" size='normal'/>{{ langs.find(x => x.lang === option).text }}
+            </div>
+        </div>
+    </div>
+</template>
 
 <style lang="scss" scoped>
 .switchLanguage {

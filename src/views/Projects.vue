@@ -1,12 +1,3 @@
-<template>
-    <main>
-        <div class="projects">
-            <Project :name="project.name" :image="`src/assets/projects/${project.name}.png`" :links="project.links" v-for="project in projects"></Project>
-            <Button class="projects__more" :text="$t(`projects.more`)" link="https://github.com/FlamesC0der" logo="bi-github" />
-        </div>
-    </main>
-</template>
-
 <script setup>
 import Project from '@/components/Project.vue'
 import Button from '@/components/common/Button.vue'
@@ -20,6 +11,15 @@ const projects = [
     },
 ]
 </script>
+
+<template>
+    <main>
+        <div class="projects">
+            <Project :name="project.name" :image="`src/assets/projects/${project.name}.png`" :links="project.links" v-for="project in projects"></Project>
+            <Button class="projects__more" :text="$t(`projects.more`)" link="https://github.com/FlamesC0der" logo="bi-github" />
+        </div>
+    </main>
+</template>
 
 <style lang="scss" scoped>
 .projects {

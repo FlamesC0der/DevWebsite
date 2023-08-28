@@ -1,3 +1,6 @@
+<script setup>
+</script>
+
 <template>
     <section class="error">
         <h1 class="error__title">{{ $t("404.title") }}</h1>
@@ -5,9 +8,6 @@
         <RouterLink class="error__link" to="/">{{ $t("404.link") }} ➜</RouterLink>
     </section>
 </template>
-
-<script setup>
-</script>
 
 <style lang="scss" scoped>
 .error {

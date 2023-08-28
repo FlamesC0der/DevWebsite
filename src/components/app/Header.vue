@@ -1,12 +1,12 @@
+<script setup>
+import NavBar from '@/components/misc/NavBar.vue'
+</script>
+
 <template>
     <header class="header">
         <NavBar />
     </header>
 </template>
-
-<script setup>
-import NavBar from '@/components/misc/NavBar.vue'
-</script>
 
 <style lang="scss" scoped>
 .header {

@@ -1,15 +1,3 @@
-<template>
-    <div class="container">
-        <Header />
-        <RouterView v-slot="{ Component, route}">
-            <Transition :name="route.meta.transition" mode="out-in">
-                <component :is="Component" />
-            </Transition>
-        </RouterView>
-        <Footer />
-    </div>
-</template>
-
 <script setup>
 import { onBeforeMount } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
@@ -27,6 +15,18 @@ onBeforeMount(async () => {
     console.log(`%c👆Refresh page to see another one of ${images.length} random images`, 'font-size: 14px; color:  #d20eb8;')
 })
 </script>
+
+<template>
+    <div class="container">
+        <Header />
+        <RouterView v-slot="{ Component, route}">
+            <Transition :name="route.meta.transition" mode="out-in">
+                <component :is="Component" />
+            </Transition>
+        </RouterView>
+        <Footer />
+    </div>
+</template>
 
 <style lang="scss" scoped>
 .container {

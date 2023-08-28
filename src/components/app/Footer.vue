@@ -1,11 +1,11 @@
+<script setup>
+</script>
+
 <template>
     <footer class="footer">
         <div class="footer__copyright">Copyright © 2023 FlamesCoder</div>
     </footer>
 </template>
-
-<script setup>
-</script>
 
 <style lang="scss" scoped>
 .footer {

@@ -20,9 +20,10 @@ console.image = function(src) {
         reader.addEventListener("load", function() {
             const img = new Image;
             img.onload = function() {
+                let devtoolswidth = (window.screen.width - document.body.clientWidth) - 60
+                devtoolswidth = (devtoolswidth > 0) ? devtoolswidth : 310
                 const canvas = document.createElement("canvas"),
                  context = canvas.getContext("2d"),
-                 devtoolswidth = (window.screen.width - document.body.clientWidth) - 60,
                  width = Math.floor(img.width > devtoolswidth ? devtoolswidth : img.width),
                  height = Math.floor(img.height * (width / img.width));
                 canvas.height = height;
@@ -41,7 +42,8 @@ console.image = function(src) {
                 p(null)
             };
             img.src = reader.result;
-        }, !1), fetch(src).then(src=>src.blob()).then(src=>reader.readAsDataURL(src))
+        }, !1),
+        fetch(src).then(src=>src.blob()).then(src=>reader.readAsDataURL(src))
     })
 }
 

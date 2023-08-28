@@ -1,12 +1,3 @@
-<template>
-  <button class="button">
-    <a class="button__link" :href="link" target="_blank">
-      <i :class="logo"></i>
-      {{ text }}
-    </a>
-  </button>
-</template>
-
 <script setup>
 const props = defineProps({
   text: {
@@ -20,6 +11,15 @@ const props = defineProps({
   }
 })
 </script>
+
+<template>
+  <button class="button">
+    <a class="button__link" :href="link" target="_blank">
+      <i :class="logo"></i>
+      {{ text }}
+    </a>
+  </button>
+</template>
 
 <style lang="scss" scoped>
 i {

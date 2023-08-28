@@ -1,14 +1,3 @@
-<template>
-    <button class="burger" @click="open = !open"><i class="bi-list"></i></button>
-    <nav class="nav" :class="{open: open}">
-        <RouterLink v-for="nav in navs" class="nav__item" :to="nav.to" :key="nav.id" @click="open = !open">
-            <i class="nav__icon" :class="nav.icon"></i>
-            <span class="nav__name">{{ $t(nav.text_key) }}</span>
-        </RouterLink>
-    </nav>
-    <LanguageSwitcher />
-</template>
-
 <script setup>
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router';
@@ -22,6 +11,17 @@ const navs = [
     {icon: "bi-grid-1x2", to: "/projects", text_key: "nav.projects"}
 ]
 </script>
+
+<template>
+    <button class="burger" @click="open = !open"><i class="bi-list"></i></button>
+    <nav class="nav" :class="{open: open}">
+        <RouterLink v-for="nav in navs" class="nav__item" :to="nav.to" :key="nav.id" @click="open = !open">
+            <i class="nav__icon" :class="nav.icon"></i>
+            <span class="nav__name">{{ $t(nav.text_key) }}</span>
+        </RouterLink>
+    </nav>
+    <LanguageSwitcher />
+</template>
 
 <style lang="scss" scoped>
 i {

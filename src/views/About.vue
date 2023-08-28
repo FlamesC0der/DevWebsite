@@ -1,3 +1,43 @@
+<script setup>
+import { ref, onBeforeMount } from 'vue'
+
+let age = ref(300)
+const code = `{
+  "name": "dev-website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@highlightjs/vue-plugin": "^2.1.0",
+    "@intlify/unplugin-vue-i18n": "^0.12.3",
+    "bootstrap-icons": "^1.10.5",
+    "vue": "^3.3.4",
+    "vue-country-flag-next": "^2.3.2",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "sass": "^1.66.1",
+    "vite": "^4.4.6"
+  }
+}`
+
+function calculateAge() {
+    var ageDifMs = Date.now() - new Date('04/04/2008');
+    var ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970)
+}
+
+onBeforeMount(() => {
+    age.value = calculateAge()
+})
+</script>
+
 <template>
     <section class="about">
         <div class="about__profile">
@@ -40,46 +80,6 @@
         <highlightjs language="json" :code="code"/>
     </section>
 </template>
-
-<script setup>
-import { ref, onBeforeMount } from 'vue'
-
-let age = ref(300)
-const code = `{
-  "name": "dev-website",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@highlightjs/vue-plugin": "^2.1.0",
-    "@intlify/unplugin-vue-i18n": "^0.12.3",
-    "bootstrap-icons": "^1.10.5",
-    "vue": "^3.3.4",
-    "vue-country-flag-next": "^2.3.2",
-    "vue-i18n": "^9.2.2",
-    "vue-router": "^4.2.4"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.2.3",
-    "sass": "^1.66.1",
-    "vite": "^4.4.6"
-  }
-}`
-
-function calculateAge() {
-    var ageDifMs = Date.now() - new Date('04/04/2008');
-    var ageDate = new Date(ageDifMs);
-    return Math.abs(ageDate.getUTCFullYear() - 1970)
-}
-
-onBeforeMount(() => {
-    age.value = calculateAge()
-})
-</script>
 
 <style lang="scss" scoped>
 .about {

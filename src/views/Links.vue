@@ -1,11 +1,3 @@
-<template>
-    <section class="links">
-        <h2 class="links__title title">{{ $t("links.links_title") }}</h2>
-        <hr>
-        <Button class="links__button" v-for="button in links" :text="button.text" :link="button.link" :logo="button.logo" />
-    </section>
-</template>
-
 <script setup>
 import Button from '@/components/common/Button.vue'
 
@@ -15,6 +7,14 @@ const links = [
     {text: 'Telegram', link: 'https://t.me/FlameCoder0_0', logo: 'bi-telegram'}
 ]
 </script>
+
+<template>
+    <section class="links">
+        <h2 class="links__title title">{{ $t("links.links_title") }}</h2>
+        <hr>
+        <Button class="links__button" v-for="button in links" :text="button.text" :link="button.link" :logo="button.logo" />
+    </section>
+</template>
 
 <style lang="scss" scoped>
 .links {

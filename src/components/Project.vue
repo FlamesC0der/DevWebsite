@@ -1,18 +1,3 @@
-<template>
-  <div class="project">
-    <div class="project__info">
-      <h2 class="project__name">{{ name }}</h2>
-      <p class="project__description">{{ $t(`projects.${name}`) }}</p>
-      <div class="project__buttons">
-        <Button class="project__button" v-for="link in links" :text="$t(`projects.${link['text']}`)" :link="link['link']" :logo="link['logo']" />
-      </div>
-    </div>
-    <div class="project__image">
-      <img :src="image" alt="" />
-    </div>
-  </div>
-</template>
-
 <script setup>
 import Button from '@/components/common/Button.vue'
 
@@ -29,6 +14,21 @@ const props = defineProps({
   }
 })
 </script>
+
+<template>
+  <div class="project">
+    <div class="project__info">
+      <h2 class="project__name">{{ name }}</h2>
+      <p class="project__description">{{ $t(`projects.${name}`) }}</p>
+      <div class="project__buttons">
+        <Button class="project__button" v-for="link in links" :text="$t(`projects.${link['text']}`)" :link="link['link']" :logo="link['logo']" />
+      </div>
+    </div>
+    <div class="project__image">
+      <img :src="image" alt="" />
+    </div>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .project {

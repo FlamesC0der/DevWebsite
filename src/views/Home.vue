@@ -1,13 +1,3 @@
-<template>
-    <section class="home">
-        <div class="top">
-            <img class="top__logo" src="@/assets/avatar.jpg" />
-            <h1 class="top__title title">FlamesCoder</h1>
-            {{ time.toLocaleTimeString() }}
-        </div>
-    </section>
-</template>
-
 <script setup>
 import { ref, onBeforeMount } from 'vue'
 
@@ -23,6 +13,16 @@ onBeforeMount(() => {
     timer()
 })
 </script>
+
+<template>
+    <section class="home">
+        <div class="top">
+            <img class="top__logo" src="@/assets/avatar.jpg" />
+            <h1 class="top__title title">FlamesCoder</h1>
+            {{ time.toLocaleTimeString() }}
+        </div>
+    </section>
+</template>
 
 <style lang="scss" scoped>
 .home {
