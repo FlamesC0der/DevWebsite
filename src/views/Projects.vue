@@ -14,7 +14,7 @@ const projects = [
 
 <template>
     <section class="projects">
-        <Project :name="project.name" :image="`src/assets/projects/${project.name}.png`" :links="project.links" v-for="project in projects"></Project>
+        <Project v-for="project in projects" :name="project.name" :image="`src/assets/projects/${project.name}.png`" :links="project.links" :key="project.id"></Project>
         <Button class="projects__more" :text="$t(`projects.more`)" link="links/github" logo="bi-github" />
     </section>
 </template>

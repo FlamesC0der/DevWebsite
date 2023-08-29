@@ -1,5 +1,6 @@
 <script setup>
-import { ref, onBeforeMount } from 'vue'
+import List from '@/components/common/List.vue'
+import { ref, onBeforeMount, h } from 'vue'
 
 let age = ref(300)
 const code = `{
@@ -27,6 +28,29 @@ const code = `{
   }
 }`
 
+const about = [
+    "about.about_me2",
+    "about.about_me3",
+    "about.about_me4"
+]
+
+const stack = [
+    {name: 'Frontend', items: [
+        {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg', text: 'Html/css'},
+        {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg', text: 'Javascript'},
+        {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original.svg', text: 'Jquery'},
+        {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg', text: 'Vue 3'},
+        {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original.svg', text: 'Webpack'},
+        {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg', text: 'Sass/Scss'},
+        {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg', text: 'Node.js'}
+    ]},
+    {name: 'Other', items: [
+        {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg', text: 'Python'},
+        {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/lua/lua-original.svg', text: 'Lua'},
+        {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg', text: 'Git'}
+    ]}
+]
+
 function calculateAge() {
     var ageDifMs = Date.now() - new Date('04/04/2008');
     var ageDate = new Date(ageDifMs);
@@ -42,41 +66,35 @@ onBeforeMount(() => {
     <section class="about">
         <div class="about__profile">
             <img class="about__logo" src="@/assets/avatar.jpg" />
-            <h1 class="about__name">FlamesCoder</h1>
+            <h2 class="about__name">FlamesCoder</h2>
         </div>
-        <h3 class="about_title title">{{ $t("about.about_me") }}</h3>
-        <hr>
-        <p><i class="bi-person-circle"></i> {{ $t("about.about_me1") }}</p>
-        <p><i class="bi-calendar"></i>  {{ age }} y.o</p>
-        <hr>
-        <ul class="list">
-            <li class="list__item">{{ $t("about.about_me2") }}</li>
-            <li class="list__item">{{ $t("about.about_me3") }}</li>
-            <li class="list__item">{{ $t("about.about_me4") }}</li>
-        </ul>
-        <hr>
-        <ul class="list">
-            <li class="list__item">Frontend</li>
+        <h3 class="title">{{ $t("about.about_me") }}</h3>
+        <div class="line"></div>
+        <List>
             <ul class="list">
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"> Html/css</li>
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"> Javascript</li>
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original.svg"> Jquery</li>
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"> Vue 3</li>
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original.svg"> Webpack</li>
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"> Sass/Scss</li>
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"> Node.js</li>
+                <li class="list__item"><i class="icon bi-person-circle"></i> {{ $t("about.about_me1") }}</li>
+                <li class="list__item"><i class="icon bi-calendar"></i>  {{ age }} y.o</li>
             </ul>
-            <li class="list__item">Other</li>
-            <ul class="list">
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"> Python</li>
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/lua/lua-original.svg"> Lua</li>
-                <li class="list__item"><img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"> Git</li>
+        </List>
+        <div class="line"></div>
+        <List>
+            <ul v-for="item in about" class="list">
+                <li class="list__item">{{ $t(item) }}</li>
             </ul>
-        </ul>
-        <hr>
-        <h3 class="about_title title">{{ $t("about.about_web1") }}</h3>
-        <p>{{ $t("about.about_web2") }} <img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"></p>
-        <p>{{ $t("about.about_web3") }}</p>
+        </List>
+        <div class="line"></div>
+        <List>
+            <ul v-for="stack_item in stack" class="list">
+                <li class="list__item">{{ stack_item['name'] }}</li>
+                <ul class="list">
+                    <li v-for="item in stack_item['items']" class="list__item"><img :src="item['icon']"> {{ item['text'] }}</li>
+                </ul>
+            </ul>
+        </List>
+        <div class="line"></div>
+        <h3 class="title">{{ $t("about.about_web1") }}</h3>
+        <p class="about__text">{{ $t("about.about_web2") }} <img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"></p>
+        <p class="about__text">{{ $t("about.about_web3") }}</p>
         <highlightjs language="json" :code="code"/>
     </section>
 </template>
@@ -104,26 +122,11 @@ onBeforeMount(() => {
         font-size: 30px;
         color: var(--font-color-orange);
     }
-    &_title {
-        margin: 10px 0;
+    &__text {
+        margin: 16px 0;
     }
 }
-p {
-    margin: 16px 0;
-}
-.list {
-    padding-left: 40px;
-    margin: 14px 0;
-    list-style: none;
-    &__item {
-        line-height: 24px;
-        &::before {
-            content: "\2022";
-            font-weight: bold;
-            display: inline-block; 
-            width: 1em;
-            margin-left: -1em;
-        }
-    }
+.title {
+    margin: 10px 0;
 }
 </style>

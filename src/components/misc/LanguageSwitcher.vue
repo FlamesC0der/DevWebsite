@@ -22,7 +22,7 @@ function switchLanguage(i) {
 <template>
     <div class="switchLanguage" tabindex="-1" @blur="open = false">
         <div class="selected" :class="{open: open}" @click="open = !open">
-            <i class="bi-globe"></i>{{ langs.find(x => x.lang === locale).text }}<i class="arrow bi-chevron-down"></i>
+            <i class="icon bi-globe"></i>{{ langs.find(x => x.lang === locale).text }}<i class="icon arrow bi-chevron-down"></i>
         </div>
         <div class="items" :class="{selectHide: !open}">
             <div v-for="(option, i) of supportedLocales" :key="i" @click="switchLanguage(i)">
@@ -44,7 +44,7 @@ function switchLanguage(i) {
     min-width: 110px;
     max-height: 44px;
 }
-i {
+.icon {
     font-size: 20px;
 }
 .arrow {

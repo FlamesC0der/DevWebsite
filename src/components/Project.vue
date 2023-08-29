@@ -21,7 +21,7 @@ const props = defineProps({
       <h2 class="project__name">{{ name }}</h2>
       <p class="project__description">{{ $t(`projects.${name}`) }}</p>
       <div class="project__buttons">
-        <Button class="project__button" v-for="link in links" :text="$t(`projects.${link['text']}`)" :link="link['link']" :logo="link['logo']" />
+        <Button class="project__button" v-for="link in links" :text="$t(`projects.${link['text']}`)" :link="link['link']" :logo="link['logo']" :key="link.id" />
       </div>
     </div>
     <div class="project__image">

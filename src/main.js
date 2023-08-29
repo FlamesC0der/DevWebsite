@@ -43,7 +43,7 @@ console.image = function(src) {
             };
             img.src = reader.result;
         }, !1),
-        fetch(src).then(src=>src.blob()).then(src=>reader.readAsDataURL(src))
+        fetch(src).then(src=>src.blob()).then(src=>reader.readAsDataURL(src)).catch(err=>console.warn(`%cFailed to send image.\n\n${err}`, "color:yellow;"))
     })
 }
 
@@ -57,11 +57,13 @@ const images = [
     'https://i.imgur.com/Bz4zagt.jpeg',
     'https://media.tenor.com/p1UCkxeGATgAAAAC/kaguya-shinomiya-kaguya.gif',
     'https://media.tenor.com/7UsfS4_MbGYAAAAd/random-gif.gif',
+    'https://media.tenor.com/fXGeFxrSmuoAAAAC/kaguya-breathing.gif',
+    'https://media.tenor.com/BBWRRzO6Kq4AAAAC/iki-kaguya.gif',
 ]
 
 async function consoleEaster() {
     await console.image(images[Math.floor(Math.random() * images.length)])
-    console.log(`%c👆Refresh page to see another one of ${images.length} random images`, 'font-size: 14px; color:  #d20eb8;')
+    console.log(`%c👆Refresh page to see another one of ${images.length} %c可愛い♡ %crandom  images`, 'font-size: 14px; color:  #b80dde;', 'font-size: 14px; color: #fe47dc;', 'font-size: 14px; color:  #b80dde;')
 }
 
 consoleEaster().catch(console.error)

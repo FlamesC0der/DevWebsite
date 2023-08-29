@@ -3,7 +3,7 @@
 
 <template>
     <section class="error">
-        <h1 class="error__title">{{ $t("404.title") }}</h1>
+        <h2 class="error__title">{{ $t("404.title") }}</h2>
         <p class="error__subtitle">{{ $t("404.subtitle") }}</p>
         <RouterLink class="error__link" to="/">{{ $t("404.link") }} ➜</RouterLink>
     </section>

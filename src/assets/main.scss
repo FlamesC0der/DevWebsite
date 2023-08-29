@@ -14,7 +14,7 @@
     --font-color-gray: #828384;
 
     --icon-color: #ffffff;
-    --link-active: #d20eb8;
+    --link-active: #de0db8;
 }
 
 html {
@@ -53,9 +53,9 @@ a {
     color: var(--font-color-blue);
 }
 
-hr {
-    border: none;
+.line {
     height: 1px;
+    width: 100%;
     background-color: #fff3;
 }
 
@@ -73,13 +73,10 @@ code {
     line-height: 20px !important;
 }
 
-i {
-    color: var(--icon-color);
-}
-
 img {
     user-select: none;
 }
+
 .icon {
     color: var(--icon-color);
 }
