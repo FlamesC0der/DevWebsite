@@ -16,14 +16,14 @@ const props = defineProps({
 <template>
   <button class="button">
     <RouterLink class="button__link" :to="link">
-      <i :class="logo"></i>
+      <i class="icon" :class="logo"></i>
       {{ text }}
     </RouterLink>
   </button>
 </template>
 
 <style lang="scss" scoped>
-i {
+.icon {
   font-size: 25px;
 }
 .button {

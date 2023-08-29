@@ -47,6 +47,25 @@ console.image = function(src) {
     })
 }
 
+const images = [
+    'https://i.imgur.com/awNMIK7.gif',
+    'https://i.imgur.com/FbUzebQ.jpeg',
+    'https://i.imgur.com/O82LpEc.jpeg',
+    'https://i.imgur.com/IzYAkYX.jpeg',
+    'https://i.imgur.com/00jIHPr.jpeg',
+    'https://i.imgur.com/jHpOXpc.jpeg',
+    'https://i.imgur.com/Bz4zagt.jpeg',
+    'https://media.tenor.com/p1UCkxeGATgAAAAC/kaguya-shinomiya-kaguya.gif',
+    'https://media.tenor.com/7UsfS4_MbGYAAAAd/random-gif.gif',
+]
+
+async function consoleEaster() {
+    await console.image(images[Math.floor(Math.random() * images.length)])
+    console.log(`%c👆Refresh page to see another one of ${images.length} random images`, 'font-size: 14px; color:  #d20eb8;')
+}
+
+consoleEaster().catch(console.error)
+
 const app = createApp(App)
 
 app

@@ -16,9 +16,9 @@ onBeforeMount(() => {
 
 <template>
     <section class="home">
-        <div class="top">
-            <img class="top__logo" src="@/assets/avatar.jpg" />
-            <h1 class="top__title title">FlamesCoder</h1>
+        <div class="home__top">
+            <img class="home__logo" src="@/assets/avatar.jpg" />
+            <h1 class="title">FlamesCoder</h1>
             {{ time.toLocaleTimeString() }}
         </div>
     </section>
@@ -31,27 +31,24 @@ onBeforeMount(() => {
     margin-bottom: 1rem;
     justify-content: center;
     margin: 2rem 0;
-}
-.top {
-    display: flex;
-    padding: 20px;
-    margin: 10px auto;
-    flex-direction: column;
-    align-items: center;
-    background: var(--background-transparent-color1);
-    backdrop-filter: blur(5px);
-    border: 2px solid var(--border-color-light1);
-    border-radius: 15px;
-    width: 100%;
-    max-width: 40rem;
-    gap: 5px;
+    &__top {
+        display: flex;
+        padding: 20px;
+        margin: 10px auto;
+        flex-direction: column;
+        align-items: center;
+        background: var(--background-transparent-color1);
+        backdrop-filter: blur(5px);
+        border: 2px solid var(--border-color-light1);
+        border-radius: 15px;
+        width: 100%;
+        max-width: 40rem;
+        gap: 5px;
+    }
     &__logo {
         width: 100px;
         height: 100px;
         border-radius: 100%;
-    }
-    &__icon {
-        width: 35px;
     }
 }
 </style>
