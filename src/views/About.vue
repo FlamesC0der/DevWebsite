@@ -1,32 +1,8 @@
 <script setup>
 import List from '@/components/common/List.vue'
-import { ref, onBeforeMount, h } from 'vue'
+import { ref, onBeforeMount } from 'vue'
 
 let age = ref(300)
-const code = `{
-  "name": "dev-website",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@highlightjs/vue-plugin": "^2.1.0",
-    "@intlify/unplugin-vue-i18n": "^0.12.3",
-    "bootstrap-icons": "^1.10.5",
-    "vue": "^3.3.4",
-    "vue-country-flag-next": "^2.3.2",
-    "vue-i18n": "^9.2.2",
-    "vue-router": "^4.2.4"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.2.3",
-    "sass": "^1.66.1",
-    "vite": "^4.4.6"
-  }
-}`
 
 const about = [
     "about.about_me2",
@@ -91,11 +67,6 @@ onBeforeMount(() => {
                 </ul>
             </ul>
         </List>
-        <div class="line"></div>
-        <h3 class="title">{{ $t("about.about_web1") }}</h3>
-        <p class="about__text">{{ $t("about.about_web2") }} <img width="20px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"></p>
-        <p class="about__text">{{ $t("about.about_web3") }}</p>
-        <highlightjs language="json" :code="code"/>
     </section>
 </template>
 

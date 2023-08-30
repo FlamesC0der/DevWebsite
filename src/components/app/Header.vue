@@ -41,6 +41,9 @@ const navs = [
         text-align: left;
         margin: 0 10px;
         max-height: 44px;
+        .icon {
+            font-size: 25px;
+        }
     }
 }
 .icon {
@@ -79,16 +82,14 @@ const navs = [
     left: 0;
     right: 0;
 }
-@media (max-width: 555px) {
-    .nav {
-        flex-direction: column;
-    }
-    .burger {
-        display: block;
-        background: none;
-    }
+@media (max-width: 600px) {
     .nav {
         display: none;
+        flex-direction: column;
+    }
+    .header__burger {
+        display: block;
+        background: none;
     }
     .open {
         display: flex;

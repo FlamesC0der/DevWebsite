@@ -1,5 +1,4 @@
 import './assets/main.scss'
-import 'highlight.js/styles/monokai-sublime.css'
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
 
 import { createApp } from 'vue'
@@ -7,12 +6,6 @@ import App from './App.vue'
 import router from './router'
 
 import i18n from './i18n'
-
-import hljs from 'highlight.js/lib/core';
-import json from 'highlight.js/lib/languages/json';
-import hljsVuePlugin from "@highlightjs/vue-plugin";
-
-hljs.registerLanguage('json', json);
 
 console.image = function(src) {
     return new Promise((resolve) => {
@@ -71,7 +64,6 @@ consoleEaster().catch(console.error)
 const app = createApp(App)
 
 app
-    .use(hljsVuePlugin)
     .use(i18n)
     .use(router)
     .mount('#app')

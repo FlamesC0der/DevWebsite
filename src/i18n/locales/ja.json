@@ -10,10 +10,7 @@
         "about_me1": "私はAlexeyで、python / javacript開発者です",
         "about_me2": "👀 私はチャットボット、ウェブサイトに興味があります...",
         "about_me3": "⚡️ 自由な時間にプログラムの問題を解決します",
-        "about_me4": "💻 Pythonの学習、Javascript ( vue )",
-        "about_web1": "ウェブサイトに関する",
-        "about_web2": "このウェブサイトは「vuejs」を使用して書かれました",
-        "about_web3": "以下に、それが何でできているかを示します"
+        "about_me4": "💻 Pythonの学習、Javascript ( vue )"
     },
     "links": {
         "links_title": "私のさまざまなプロフィールへのリンク"
