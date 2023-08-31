@@ -3,6 +3,7 @@ import List from '@/components/common/List.vue'
 import { ref, onBeforeMount } from 'vue'
 
 let age = ref(300)
+const calendarDateIcon = `https://img.icons8.com/FFFFFF/calendar-${new Date().getDate()}`
 
 const about = [
     "about.about_me2",
@@ -49,7 +50,7 @@ onBeforeMount(() => {
         <List>
             <ul class="list">
                 <li class="list__item"><img class="icon" src="https://img.icons8.com/FFFFFF/info"/> {{ $t("about.about_me1") }}</li>
-                <li class="list__item"><img class="icon" src="https://img.icons8.com/FFFFFF/calendar"/> {{ age }} y.o</li>
+                <li class="list__item"><img class="icon" :src="calendarDateIcon"/> {{ age }} y.o</li>
             </ul>
         </List>
         <div class="line"></div>

@@ -73,6 +73,7 @@ function switchLanguage(i) {
             user-select: none;
             justify-content: space-between;
             padding: 0 5px;
+            border-top: 2px solid var(--border-color-light1);
         }
     }
 }
