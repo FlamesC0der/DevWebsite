@@ -48,8 +48,8 @@ onBeforeMount(() => {
         <div class="line"></div>
         <List>
             <ul class="list">
-                <li class="list__item"><i class="icon bi-person-circle"></i> {{ $t("about.about_me1") }}</li>
-                <li class="list__item"><i class="icon bi-calendar"></i>  {{ age }} y.o</li>
+                <li class="list__item"><img class="icon" src="https://img.icons8.com/FFFFFF/info"/> {{ $t("about.about_me1") }}</li>
+                <li class="list__item"><img class="icon" src="https://img.icons8.com/FFFFFF/calendar"/> {{ age }} y.o</li>
             </ul>
         </List>
         <div class="line"></div>

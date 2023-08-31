@@ -5,10 +5,10 @@ import LanguageSwitcher from '@/components/misc/LanguageSwitcher.vue';
 
 let open = ref(false)
 const navs = [
-    {icon: "bi-book", to: "/", text_key: "nav.home"},
-    {icon: "bi-file-person", to: "/about", text_key: "nav.about"},
-    {icon: "bi-person-lines-fill", to: "/links", text_key: "nav.links"},
-    {icon: "bi-grid-1x2", to: "/projects", text_key: "nav.projects"}
+    {icon: "https://img.icons8.com/FFFFFF/home", to: "/", text_key: "nav.home"},
+    {icon: "https://img.icons8.com/FFFFFF/apple-contacts", to: "/about", text_key: "nav.about"},
+    {icon: "https://img.icons8.com/FFFFFF/test", to: "/links", text_key: "nav.links"},
+    {icon: "https://img.icons8.com/FFFFFF/code", to: "/projects", text_key: "nav.projects"}
 ]
 </script>
 
@@ -17,7 +17,7 @@ const navs = [
         <button class="header__burger" @click="open = !open"><i class="bi-list icon"></i></button>
         <nav class="nav" :class="{open: open}">
             <RouterLink v-for="nav in navs" class="nav__item" :to="nav.to" :key="nav.id" @click="open = !open">
-                <i class="icon" :class="nav.icon"></i>
+                <img class="icon" :src="nav.icon"/>
                 <span class="nav__name">{{ $t(nav.text_key) }}</span>
             </RouterLink>
         </nav>
@@ -46,9 +46,6 @@ const navs = [
         }
     }
 }
-.icon {
-    font-size: 15px;
-}
 .nav {
     display: flex;
     flex-direction: row;
@@ -61,6 +58,7 @@ const navs = [
         gap: 0.5rem;
         border-radius: 5px;
         padding: 0 10px;
+        align-items: center;
         &:hover {
             background: var(--background-transparent-color2);
             transition: background .25s;

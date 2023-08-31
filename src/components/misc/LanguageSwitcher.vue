@@ -22,7 +22,7 @@ function switchLanguage(i) {
 <template>
     <div class="switchLanguage" tabindex="-1" @blur="open = false">
         <div class="switchLanguage__selected" :class="{open: open}" @click="open = !open">
-            <i class="icon bi-globe"></i>{{ langs.find(x => x.lang === locale).text }}<i class="icon arrow bi-chevron-down"></i>
+            <img class="icon" src="https://img.icons8.com/FFFFFF/globe"/>{{ langs.find(x => x.lang === locale).text }}<img class="icon arrow" src="https://img.icons8.com/FFFFFF/chevron-down"/>
         </div>
         <div class="switchLanguage__items" :class="{selectHide: !open}">
             <div v-for="(option, i) of supportedLocales" :key="i" @click="switchLanguage(i)">
@@ -49,6 +49,7 @@ function switchLanguage(i) {
         user-select: none;
         width: 100%;
         justify-content: space-around;
+        align-items: center;
     }
     &__items {
         position: absolute;
@@ -75,11 +76,7 @@ function switchLanguage(i) {
         }
     }
 }
-.icon {
-    font-size: 20px;
-}
 .arrow {
-    -webkit-text-stroke: 1px;
     transition: transform .3s;
 }
 .open .arrow {

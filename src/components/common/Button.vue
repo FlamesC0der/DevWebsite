@@ -16,7 +16,7 @@ const props = defineProps({
 <template>
   <button class="button">
     <RouterLink class="button__link" :to="link">
-      <i class="icon" :class="logo"></i>
+      <img class="icon" :src="logo"/>
       {{ text }}
     </RouterLink>
   </button>
@@ -24,7 +24,8 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .icon {
-  font-size: 25px;
+  height: 30px;
+  width: 30px;
 }
 .button {
   background: var(--background-transparent-color2);
