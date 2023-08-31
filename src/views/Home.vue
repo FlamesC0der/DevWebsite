@@ -28,13 +28,13 @@ onBeforeMount(() => {
 .home {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
     justify-content: center;
     margin: 2rem 0;
+    gap: 5px;
     &__top {
         display: flex;
         padding: 20px;
-        margin: 10px auto;
+        margin: 0 auto;
         flex-direction: column;
         align-items: center;
         background: var(--background-transparent-color1);

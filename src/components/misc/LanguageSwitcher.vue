@@ -21,10 +21,10 @@ function switchLanguage(i) {
 
 <template>
     <div class="switchLanguage" tabindex="-1" @blur="open = false">
-        <div class="selected" :class="{open: open}" @click="open = !open">
+        <div class="switchLanguage__selected" :class="{open: open}" @click="open = !open">
             <i class="icon bi-globe"></i>{{ langs.find(x => x.lang === locale).text }}<i class="icon arrow bi-chevron-down"></i>
         </div>
-        <div class="items" :class="{selectHide: !open}">
+        <div class="switchLanguage__items" :class="{selectHide: !open}">
             <div v-for="(option, i) of supportedLocales" :key="i" @click="switchLanguage(i)">
                 <country-flag :country="langs.find(x => x.lang === option).country" size='normal'/>{{ langs.find(x => x.lang === option).text }}
             </div>
@@ -43,6 +43,37 @@ function switchLanguage(i) {
     border-radius: 5px;
     min-width: 110px;
     max-height: 44px;
+    &__selected {
+        display: flex;
+        cursor: pointer;
+        user-select: none;
+        width: 100%;
+        justify-content: space-around;
+    }
+    &__items {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        left: 0;
+        right: 0;
+        top: 42px;
+        width: 100%;
+        z-index: 1;
+        background: var(--border-color-light1);
+        backdrop-filter: blur(5px);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background-color: var(--background-transparent-color3);
+        border: 2px solid var(--border-color-light1);
+        div {
+            display: flex;
+            cursor: pointer;
+            user-select: none;
+            justify-content: space-between;
+            padding: 0 5px;
+        }
+    }
 }
 .icon {
     font-size: 20px;
@@ -53,37 +84,6 @@ function switchLanguage(i) {
 }
 .open .arrow {
     transform: rotate(180deg);
-}
-.selected {
-    display: flex;
-    cursor: pointer;
-    user-select: none;
-    width: 100%;
-    justify-content: space-around;
-}
-.items {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    left: 0;
-    right: 0;
-    top: 42px;
-    width: 100%;
-    z-index: 1;
-    background: var(--border-color-light1);
-    backdrop-filter: blur(5px);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: var(--background-transparent-color3);
-    border: 2px solid var(--border-color-light1);
-}
-.items div {
-    display: flex;
-    cursor: pointer;
-    user-select: none;
-    justify-content: space-between;
-    padding: 0 5px;
 }
 .selectHide {
     display: none;
