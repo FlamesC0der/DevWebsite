@@ -14,7 +14,7 @@ const navs = [
 
 <template>
   <header class="header">
-    <button class="header__burger" @click="open = !open"><i class="bi-list icon"></i></button>
+    <button class="header__burger" @click="open = !open"><img class="icon" src="https://img.icons8.com/FFFFFF/menu"/></button>
     <nav class="nav" :class="{open: open}">
       <RouterLink v-for="nav in navs" class="nav__item" :to="nav.to" :key="nav.id" @click="open = !open">
         <img class="icon" :src="nav.icon"/>
