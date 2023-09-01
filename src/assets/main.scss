@@ -1,84 +1,84 @@
 @import url(reset.scss);
 
 :root {
-    --background-transparent-color1: rgba(17, 17, 17, 0.6);
-    --background-transparent-color2: rgba(59, 59, 59, 0.3);
-    --background-transparent-color3: rgba(51, 51, 51, 0.3);
+  --background-transparent-color1: rgba(17, 17, 17, 0.6);
+  --background-transparent-color2: rgba(59, 59, 59, 0.3);
+  --background-transparent-color3: rgba(51, 51, 51, 0.3);
 
-    --border-color-light1: rgba(255, 255, 255, 0.2);
+  --border-color-light1: rgba(255, 255, 255, 0.2);
 
-    --font-color-white: #e4e5e6;
-    --font-color-orange: #cc7e57;
-    --font-color-green: #57cc8a;
-    --font-color-blue: #d0efef;
-    --font-color-gray: #828384;
+  --font-color-white: #e4e5e6;
+  --font-color-orange: #cc7e57;
+  --font-color-green: #57cc8a;
+  --font-color-blue: #d0efef;
+  --font-color-gray: #828384;
 
-    --icon-color: #ffffff;
-    --link-active: #de0db8;
+  --icon-color: #ffffff;
+  --link-active: #de0db8;
 }
 
 html {
-    background: #000;
+  background: #000;
 }
 
 body {
-    background: url(@/assets/background.jpeg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: "Menlo", "Meslo LG", monospace;
-    font-size: 14px;
-    overflow-y: scroll;
-    &::-webkit-scrollbar {
-        background: #560aa269;
-        height: 6px;
-        width: 6px;
-    }
-    &::-webkit-scrollbar-button {
-        display: none;
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: #9d0a89;
-        border-radius: 8px;
-    }
+  background: url(@/assets/background.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Menlo", "Meslo LG", monospace;
+  font-size: 14px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    background: #560aa269;
+    height: 6px;
+    width: 6px;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #9d0a89;
+    border-radius: 8px;
+  }
 }
 #app {
-    max-width: 60rem;
-    margin: 0 auto;
-    padding: 0 2rem;
-    color: var(--font-color-white);
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+  color: var(--font-color-white);
 }
 
 a {
-    color: var(--font-color-blue);
+  color: var(--font-color-blue);
 }
 
 .line {
-    height: 1px;
-    width: 100%;
-    background-color: #fff3;
+  height: 1px;
+  width: 100%;
+  background-color: #fff3;
 }
 
 .title {
-    font-size: 25px;
-    color: var(--font-color-orange);
+  font-size: 25px;
+  color: var(--font-color-orange);
 }
 
 pre,
 code {
-    background: var(--background-transparent-color1) !important;
-    border-radius: 15px !important;
+  background: var(--background-transparent-color1) !important;
+  border-radius: 15px !important;
 }
 code {
-    line-height: 20px !important;
+  line-height: 20px !important;
 }
 
 img {
-    user-select: none;
+  user-select: none;
 }
 
 .icon {
-    color: var(--icon-color);
-    height: 20px;
-    width: 20px;
+  color: var(--icon-color);
+  height: 20px;
+  width: 20px;
 }
