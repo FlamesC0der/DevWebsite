@@ -2,23 +2,24 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router';
 import LanguageSwitcher from '@/components/misc/LanguageSwitcher.vue';
+import Icon from '@/components/common/Icon.vue'
 
 let open = ref(false)
 const navs = [
-  {icon: "https://img.icons8.com/FFFFFF/home", to: "/", text_key: "nav.home"},
-  {icon: "https://img.icons8.com/FFFFFF/apple-contacts", to: "/about", text_key: "nav.about"},
-  {icon: "https://img.icons8.com/FFFFFF/test", to: "/links", text_key: "nav.links"},
-  {icon: "https://img.icons8.com/FFFFFF/code", to: "/projects", text_key: "nav.projects"}
+  {icon: "nav/home", to: "/", text_key: "nav.home"},
+  {icon: "nav/about", to: "/about", text_key: "nav.about"},
+  {icon: "nav/links", to: "/links", text_key: "nav.links"},
+  {icon: "nav/projects", to: "/projects", text_key: "nav.projects"}
 ]
 </script>
 
 <template>
   <header class="header">
-    <button class="header__burger" @click="open = !open"><img class="icon" src="https://img.icons8.com/FFFFFF/menu"/></button>
+    <button class="header__burger" @click="open = !open"><Icon class="icon" name="menu" size="50px"/></button>
     <nav class="nav" :class="{open: open}">
       <RouterLink v-for="nav in navs" class="nav__item" :to="nav.to" :key="nav.id" @click="open = !open">
-        <img class="icon" :src="nav.icon"/>
-        <span class="nav__name">{{ $t(nav.text_key) }}</span>
+        <Icon class="icon" :name="nav.icon" size="15px"/>
+        <p class="nav__name">{{ $t(nav.text_key) }}</p>
       </RouterLink>
     </nav>
     <LanguageSwitcher />
@@ -41,9 +42,6 @@ const navs = [
     text-align: left;
     margin: 0 10px;
     max-height: 44px;
-    .icon {
-      font-size: 25px;
-    }
   }
 }
 .nav {
@@ -68,8 +66,6 @@ const navs = [
     font-size: 15px;
   }
 }
-
-// old
 .router-link-active::after {
   position: absolute;
   content: "";

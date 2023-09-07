@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Tr from "@/i18n/translation"
 import CountryFlag from 'vue-country-flag-next'
+import Icon from '@/components/common/Icon.vue'
 
 let open = ref(false)
 const langs = [
@@ -22,7 +23,7 @@ function switchLanguage(i) {
 <template>
   <div class="switchLanguage" tabindex="-1" @blur="open = false">
     <div class="switchLanguage__selected" :class="{open: open}" @click="open = !open">
-      <img class="icon" src="https://img.icons8.com/FFFFFF/globe"/>{{ langs.find(x => x.lang === locale).text }}<img class="icon arrow" src="https://img.icons8.com/FFFFFF/chevron-down"/>
+      <Icon class="icon" name="globe" size="20px"/>{{ langs.find(x => x.lang === locale).text }}<Icon class="icon arrow" name="chevron-down" size="20px"/>
     </div>
     <div class="switchLanguage__items" :class="{selectHide: !open}">
       <div v-for="(option, i) of supportedLocales" :key="i" @click="switchLanguage(i)">
@@ -58,7 +59,7 @@ function switchLanguage(i) {
     text-align: center;
     left: 0;
     right: 0;
-    top: 42px;
+    top: 48px;
     width: 100%;
     z-index: 1;
     background: var(--border-color-light1);

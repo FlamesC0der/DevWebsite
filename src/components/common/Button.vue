@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import Icon from '@/components/common/Icon.vue'
 const props = defineProps({
   text: {
     type: String,
@@ -16,17 +17,13 @@ const props = defineProps({
 <template>
   <button class="button">
     <RouterLink class="button__link" :to="link">
-      <img class="icon" :src="logo"/>
+      <Icon class="icon" :name="logo" size="30px"/>
       {{ text }}
     </RouterLink>
   </button>
 </template>
 
 <style lang="scss" scoped>
-.icon {
-  height: 30px;
-  width: 30px;
-}
 .button {
   background: var(--background-transparent-color2);
   border-radius: 10px;

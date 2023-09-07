@@ -1,10 +1,11 @@
-import './assets/main.scss'
+import './assets/styles/main.scss'
 
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-
 import i18n from './i18n'
+
+console.log("%cMade with ♡ by @FlamesCoder\n%cThanks for the help in the development of the website:\n%c@LehaRybkoha", "color: #cc5ae8;", "color: #fa8cbc;", "color: #e609a3;")
 
 console.image = function(src) {
   return new Promise((resolve) => {

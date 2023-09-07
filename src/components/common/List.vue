@@ -1,8 +1,23 @@
 <script setup>
+const props = defineProps({
+  items: Array,
+  title: {
+    required: false,
+    type: String
+  }
+})
 </script>
 
 <template>
-  <slot></slot>
+  <ul v-if="title" class="list">
+    <li class="list__item">{{ title }}</li>
+    <ul class="list">
+      <li v-for="item in items" class="list__item"><img v-if="item.icon" class="icon" :src="item.icon"/><p v-if="item.text.type == 'translation'">{{ $t(item.text.text) }}</p><p v-else>{{ item.text.text }}</p></li>
+    </ul>
+  </ul>
+  <ul v-else class="list">
+    <li v-for="item in items" class="list__item"><img v-if="item.icon" class="icon" :src="item.icon"/><p v-if="item.text.type == 'translation'">{{ $t(item.text.text) }}</p><p v-else>{{ item.text.text }}</p></li>
+  </ul>
 </template>
 
 <style lang="scss">
@@ -14,6 +29,8 @@ img {
   margin: 14px 0;
   list-style: none;
   &__item {
+    display: flex;
+    gap: 5px;
     margin: 10px 0;
     line-height: 20px;
     &::before {

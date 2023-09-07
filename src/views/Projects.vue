@@ -6,7 +6,7 @@ const projects = [
   {
     name: 'discord-bot-template',
     links: [
-      {text: 'source', link: 'projects/discord-bot-template', logo: 'https://img.icons8.com/FFFFFF/github'},
+      {text: 'source', link: 'projects/discord-bot-template', logo: 'social/github'},
     ],
   },
 ]
@@ -15,7 +15,7 @@ const projects = [
 <template>
   <section class="projects">
     <Project v-for="project in projects" :name="project.name" :image="`src/assets/projects/${project.name}.png`" :links="project.links" :key="project.id"></Project>
-    <Button class="projects__more" :text="$t(`projects.more`)" link="links/github" logo="https://img.icons8.com/FFFFFF/github" />
+    <Button class="projects__more" :text="$t(`projects.more`)" link="links/github" logo="social/github"/>
   </section>
 </template>
 
