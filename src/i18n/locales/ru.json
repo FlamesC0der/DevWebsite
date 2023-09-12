@@ -5,6 +5,9 @@
     "links": "Ссылки",
     "projects": "Проекты"
   },
+  "home": {
+    "countdown": "Дней до нового года"
+  },
   "about": {
     "about_me": "Обо мне",
     "about_me1": "Меня зовут Алексей и я программист на python/javaScript",

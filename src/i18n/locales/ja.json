@@ -5,6 +5,9 @@
     "links": "リンク",
     "projects": "プロジェクト"
   },
+  "home": {
+    "countdown": "新年までの日数"
+  },
   "about": {
     "about_me": "私について",
     "about_me1": "私はAlexeyで、python / javacript開発者です",

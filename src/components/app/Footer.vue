@@ -13,7 +13,7 @@
   margin-bottom: 20px;
   width: 100%;
   margin-top: auto;
-  background: var(--background-transparent-color1);
+  background: var(--background-transparent-color2);
   border-radius: 15px;
   &__copyright {
     font-weight: 100;
