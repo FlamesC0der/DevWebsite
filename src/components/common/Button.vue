@@ -29,6 +29,7 @@ const props = defineProps({
   border-radius: 10px;
   font-size: 1.25rem;
   user-select: none;
+  border: 1px solid var(--border-color-light1);
   &__link {
     display: flex;
     justify-content: center;

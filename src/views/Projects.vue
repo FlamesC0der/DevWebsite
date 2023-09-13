@@ -23,16 +23,25 @@ const projects = [
 .projects {
   margin-bottom: 1rem;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   background: var(--background-transparent-color1);
   border-radius: 15px;
   padding: 10px;
   backdrop-filter: blur(5px);
+  >div, button {
+    border: 3px solid #bf0dde9e;
+  }
   &__projects__more {
     background: var(--background-transparent-color2);
     border-radius: 15px;
     min-height: 50px;
     padding: 10px 15px;
+  }
+}
+@media (max-width: 850px) {
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
 </style>
