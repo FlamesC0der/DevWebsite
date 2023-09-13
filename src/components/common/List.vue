@@ -1,4 +1,5 @@
 <script setup>
+import Icon from '@/components/common/Icon.vue'
 const props = defineProps({
   items: Array,
   title: {
@@ -12,11 +13,11 @@ const props = defineProps({
   <ul v-if="title" class="list">
     <li class="list__item">{{ title }}</li>
     <ul class="list">
-      <li v-for="item in items" class="list__item"><img v-if="item.icon" class="icon" :src="item.icon"/><p v-if="item.text.type == 'translation'">{{ $t(item.text.text) }}</p><p v-else>{{ item.text.text }}</p></li>
+      <li v-for="item in items" class="list__item"><Icon v-if="item.icon" class="icon" :name="item.icon"/><p v-if="item.text.type == 'translation'">{{ $t(item.text.text) }}</p><p v-else>{{ item.text.text }}</p></li>
     </ul>
   </ul>
   <ul v-else class="list">
-    <li v-for="item in items" class="list__item"><img v-if="item.icon" class="icon" :src="item.icon"/><p v-if="item.text.type == 'translation'">{{ $t(item.text.text) }}</p><p v-else>{{ item.text.text }}</p></li>
+    <li v-for="item in items" class="list__item"><Icon v-if="item.icon" class="icon" :name="item.icon"/><p v-if="item.text.type == 'translation'">{{ $t(item.text.text) }}</p><p v-else>{{ item.text.text }}</p></li>
   </ul>
 </template>
 

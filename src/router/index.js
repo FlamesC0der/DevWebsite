@@ -68,6 +68,14 @@ const router = createRouter({
           beforeEnter(to, from, next) {
             window.location.href = "https://github.com/FlamesC0der/discord-bot-template";
           }
+        },
+        {
+          path: 'webpack-simple',
+          name: 'webpack-simple',
+          component: () => import('@/views/Projects.vue'),
+          beforeEnter(to, from, next) {
+            window.location.href = "https://github.com/FlamesC0der/Webpack-simple";
+          }
         }
       ]
     },

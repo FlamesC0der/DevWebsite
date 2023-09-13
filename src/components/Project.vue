@@ -58,8 +58,11 @@ const props = defineProps({
     gap: 10px;
     flex-wrap: wrap;
   }
-}
-img {
-  width: 50px;
+  &__image {
+    min-width: 50px;
+    img {
+      width: 50px;
+    }
+  }
 }
 </style>

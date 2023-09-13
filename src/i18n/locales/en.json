@@ -21,7 +21,8 @@
   "projects": {
     "more": "More projects on my github",
     "source": "Source code",
-    "discord-bot-template": "Basic multifunctional discord bot template on python."
+    "discord-bot-template": "Basic multifunctional discord bot template on python.",
+    "Webpack-simple": "Basic configured webpack"
   },
   "404": {
     "title": "404 NOT FOUND",

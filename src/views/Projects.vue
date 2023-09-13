@@ -9,6 +9,12 @@ const projects = [
       {text: 'source', link: 'projects/discord-bot-template', logo: 'social/github'},
     ],
   },
+  {
+    name: 'Webpack-simple',
+    links: [
+      {text: 'source', link: 'projects/webpack-simple', logo: 'social/github'},
+    ],
+  },
 ]
 </script>
 
@@ -30,7 +36,8 @@ const projects = [
   padding: 10px;
   backdrop-filter: blur(5px);
   >div, button {
-    border: 3px solid #bf0dde9e;
+    border: 3px solid #bf0dde72;
+    min-height: 10rem;
   }
   &__projects__more {
     background: var(--background-transparent-color2);

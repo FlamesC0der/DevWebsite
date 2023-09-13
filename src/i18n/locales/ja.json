@@ -21,7 +21,8 @@
   "projects": {
     "more": "私のgithubでより多くのプロジェクト",
     "source": "ソースコード",
-    "discord-bot-template": "Python 上の基本的な多機能 Discord ボット テンプレート。"
+    "discord-bot-template": "Python 上の基本的な多機能 Discord ボット テンプレート。",
+    "Webpack-simple": "基本的に設定された Webpack"
   },
   "404": {
     "title": "404 NOT FOUND",

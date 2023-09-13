@@ -21,7 +21,8 @@
   "projects": {
     "more": "Больше проектов на моём github",
     "source": "Исходный код",
-    "discord-bot-template": "Базовый шаблон discord-бота на python."
+    "discord-bot-template": "Базовый шаблон discord-бота на python.",
+    "Webpack-simple": "базовый настроенный webpack"
   },
   "404": {
     "title": "404 Страница не найдена",

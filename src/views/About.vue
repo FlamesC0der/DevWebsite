@@ -1,5 +1,5 @@
 <script setup>
-import List from '../components/common/List.vue';
+import List from '@/components/common/List.vue';
 import { ref, onBeforeMount } from 'vue'
 
 let age = ref(300)
@@ -7,8 +7,8 @@ let age = ref(300)
 const AboutList = {
   About1: {
     items: [
-      {icon: 'https://img.icons8.com/FFFFFF/info', text: {text: 'about.about_me1', type: 'translation'}},
-      {icon: 'https://img.icons8.com/FFFFFF/calendar-4', text: {text: age, type: 'text'}},
+      {icon: 'info', text: {text: 'about.about_me1', type: 'translation'}},
+      {icon: 'calendar', text: {text: age, type: 'text'}},
     ]
   },
   About2: {
@@ -21,21 +21,21 @@ const AboutList = {
   Frontend: {
     title: 'Frontend',
     items: [
-      {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg', text: {text: 'Html/css', type: 'text'}},
-      {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg', text: {text: 'Javascript', type: 'text'}},
-      {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jquery/jquery-original.svg', text: {text: 'Jquery', type: 'text'}},
-      {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg', text: {text: 'Vue 3', type: 'text'}},
-      {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original.svg', text: {text: 'Webpack', type: 'text'}},
-      {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg', text: {text: 'Sass/Scss', type: 'text'}},
-      {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg', text: {text: 'Node.js', type: 'text'}}
+      {icon: 'stack/html5', text: {text: 'Html/css', type: 'text'}},
+      {icon: 'stack/javascript', text: {text: 'Javascript', type: 'text'}},
+      {icon: 'stack/jquery', text: {text: 'Jquery', type: 'text'}},
+      {icon: 'stack/vuejs', text: {text: 'Vue 3', type: 'text'}},
+      {icon: 'stack/webpack', text: {text: 'Webpack', type: 'text'}},
+      {icon: 'stack/sass', text: {text: 'Sass/Scss', type: 'text'}},
+      {icon: 'stack/nodejs', text: {text: 'Node.js', type: 'text'}}
     ]
   },
   Other: {
     title: 'Other',
     items: [
-      {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg', text: {text: 'Python', type: 'text'}},
-      {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/lua/lua-original.svg', text: {text: 'Lua', type: 'text'}},
-      {icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg', text: {text: 'Git', type: 'text'}}
+      {icon: 'stack/python', text: {text: 'Python', type: 'text'}},
+      {icon: 'stack/lua', text: {text: 'Lua', type: 'text'}},
+      {icon: 'stack/git', text: {text: 'Git', type: 'text'}}
     ]
   }
 }
