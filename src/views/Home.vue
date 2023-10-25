@@ -46,7 +46,7 @@ onBeforeMount(() => {
 <template>
   <section class="home">
     <div class="home__top">
-      <img class="home__logo" src="@/assets/avatar.jpg" />
+      <img class="home__logo" src="@/assets/avatar.gif" />
       <h1 class="title">FlamesCoder</h1>
       {{ time.toLocaleTimeString() }}
     </div>
