@@ -10,10 +10,10 @@
   },
   "about": {
     "about_me": "私について",
-    "about_me1": "私はAlexeyで、python / javacript開発者です",
+    "about_me1": "私はAlexeyです。python / javacript開発者です",
     "about_me2": "👀 私はチャットボット、ウェブサイトに興味があります...",
     "about_me3": "⚡️ 自由な時間にプログラムの問題を解決します",
-    "about_me4": "💻 Pythonの学習、Javascript ( vue )"
+    "about_me4": "💻 Pythonの学習、Javascript （vuejs ）"
   },
   "links": {
     "links_title": "私のさまざまなプロフィールへのリンク"
