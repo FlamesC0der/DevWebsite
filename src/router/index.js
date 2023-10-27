@@ -76,6 +76,14 @@ const router = createRouter({
           beforeEnter(to, from, next) {
             window.location.href = "https://github.com/FlamesC0der/Webpack-simple";
           }
+        },
+        {
+          path: 'powercode-scanner',
+          name: 'powercode-scanner',
+          component: () => import('@/views/Projects.vue'),
+          beforeEnter(to, from, next) {
+            window.location.href = "https://github.com/FlamesC0der/PowerCode-Scanner"
+          }
         }
       ]
     },

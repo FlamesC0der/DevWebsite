@@ -15,6 +15,12 @@ const projects = [
       {text: 'source', link: 'projects/webpack-simple', logo: 'social/github'},
     ],
   },
+  {
+    name: 'PowerCode-Scanner',
+    links: [
+      {text: 'source', link: 'projects/powercode-scanner', logo: 'social/github'}
+    ]
+  }
 ]
 </script>
 

@@ -22,7 +22,8 @@
     "more": "私のgithubでより多くのプロジェクト",
     "source": "ソースコード",
     "discord-bot-template": "Python 上の基本的な多機能 Discord ボット テンプレート。",
-    "Webpack-simple": "基本的に設定された Webpack"
+    "Webpack-simple": "基本的に設定された Webpack",
+    "PowerCode-Scanner": "QRCode scanner (Hackaton 2023) \"Моя профессия IT\""
   },
   "404": {
     "title": "404 NOT FOUND",

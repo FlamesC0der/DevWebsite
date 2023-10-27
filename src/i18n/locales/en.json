@@ -22,7 +22,8 @@
     "more": "More projects on my github",
     "source": "Source code",
     "discord-bot-template": "Basic multifunctional discord bot template on python.",
-    "Webpack-simple": "Basic configured webpack"
+    "Webpack-simple": "Basic configured webpack",
+    "PowerCode-Scanner": "QRCode scanner (Hackaton 2023) \"Моя профессия IT\""
   },
   "404": {
     "title": "404 NOT FOUND",
