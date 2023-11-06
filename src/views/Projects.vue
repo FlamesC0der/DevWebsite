@@ -20,6 +20,9 @@ const projects = [
     links: [
       {text: 'source', link: 'projects/powercode-scanner', logo: 'social/github'}
     ]
+  },
+  {
+    name: 'PyRenju',
   }
 ]
 </script>
