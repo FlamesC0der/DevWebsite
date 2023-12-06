@@ -84,6 +84,14 @@ const router = createRouter({
           beforeEnter(to, from, next) {
             window.location.href = "https://github.com/FlamesC0der/PowerCode-Scanner"
           }
+        },
+        {
+          path: 'pyrenju',
+          name: 'pyrenju',
+          component: () => import('@/views/Projects.vue'),
+          beforeEnter(to, from, next) {
+            window.location.href = "https://github.com/FlamesC0der/PyRenju"
+          }
         }
       ]
     },
