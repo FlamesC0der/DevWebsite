@@ -56,7 +56,8 @@ const images = [
 
 async function consoleEaster() {
   await console.image(images[Math.floor(Math.random() * images.length)])
-  console.log(`%c👆Refresh page to see another one of ${images.length} %c可愛い♡ %crandom  images`, 'font-size: 14px; color:  #b80dde;', 'font-size: 14px; color: #fe47dc;', 'font-size: 14px; color:  #b80dde;')
+  console.log(`%c👆ページを更新すると、%cかわいい♡%cランダム画像${images.length}枚が表示されます`, 'font-size: 14px; color:  #b80dde;', 'font-size: 14px; color: #fe47dc;', 'font-size: 14px; color:  #b80dde;')
+  // console.log(`%c👆Refresh page to see another one of ${images.length} %c可愛い♡ %crandom  images`, 'font-size: 14px; color:  #b80dde;', 'font-size: 14px; color: #fe47dc;', 'font-size: 14px; color:  #b80dde;')
 }
 
 consoleEaster().catch(console.error)
