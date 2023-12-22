@@ -225,6 +225,7 @@ import Footer from '@/components/app/Footer.vue'
   flex-direction: column;
   padding-top: 3rem;
   min-height: 100vh;
+  z-index: 1;
 }
 // slide animation
 .slide-right-enter-active,
