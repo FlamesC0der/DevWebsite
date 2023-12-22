@@ -2,12 +2,21 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Header from '@/components/app/Header.vue'
 import Footer from '@/components/app/Footer.vue'
+import vueLive2d from 'vue-live2d'
+
+const tips = {
+  mouseover: [{
+    selector: '.vue-live2d',
+    texts: ['こんにちは！']
+  }]
+}
+
 </script>
 
 <template>
   <div class="container">
     <div class="alert">
-      <p class="alert__message">&#x26A0;Attention This website will be migrated soon to new domain. Website will be completely rewritten &#x26A0;注意 このウェブサイトは間もなく新しいドメインに移行されます。ウェブサイトは完全に書き換えられます</p>
+      <p class="alert__message">&#x26A0;Attention This website will be migrated soon to new domain. Website will be completely rewritten &#x26A0  注意 このウェブサイトは間もなく新しいドメインに移行されます。ウェブサイトは完全に書き換えられます</p>
     </div>
     <Header />
     <RouterView v-slot="{ Component, route}">
@@ -17,6 +26,7 @@ import Footer from '@/components/app/Footer.vue'
     </RouterView>
     <Footer />
   </div>
+  <vueLive2d class="ch" :tips="tips" home-page="/" />
   <div class="snow-wrapper">
     <div class="snow"></div>
     <div class="snow"></div>
@@ -257,50 +267,38 @@ import Footer from '@/components/app/Footer.vue'
   opacity: 0;
 }
 
+.ch {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
 // Alert
 .alert{
   border: 3px solid black;
   border-radius: 5px;
   overflow: hidden;
-  // height: 25px;
+
   background: rgba(51, 51, 51, 0.3);
   padding: 5px;
   border-radius: 15px;
   &__message {
-    /* animation properties */
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
     transform: translateX(100%);
     
-    -moz-animation: alert-animation 40s linear infinite;
-    -webkit-animation: alert-animation 40s linear infinite;
     animation: alert-animation 40s linear infinite;
     width: auto;
     text-wrap: nowrap;
   }
 }
 
-/* for Firefox */
-@-moz-keyframes alert-animation {
-  from { -moz-transform: translateX(100%); }
-  to { -moz-transform: translateX(-100%); }
-}
-
-/* for Chrome */
-@-webkit-keyframes alert-animation {
-  from { -webkit-transform: translateX(100%); }
-  to { -webkit-transform: translateX(-100%); }
-}
-
 @keyframes alert-animation {
   from {
-    -moz-transform: translateX(100%);
-    -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
   to {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
     transform: translateX(-200%);
   }
 }
