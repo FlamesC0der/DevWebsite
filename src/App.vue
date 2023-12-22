@@ -2,15 +2,6 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Header from '@/components/app/Header.vue'
 import Footer from '@/components/app/Footer.vue'
-import vueLive2d from 'vue-live2d'
-
-const tips = {
-  mouseover: [{
-    selector: '.vue-live2d',
-    texts: ['こんにちは！']
-  }]
-}
-
 </script>
 
 <template>
@@ -26,7 +17,6 @@ const tips = {
     </RouterView>
     <Footer />
   </div>
-  <vueLive2d class="ch" :tips="tips" home-page="/" />
   <div class="snow-wrapper">
     <div class="snow"></div>
     <div class="snow"></div>
@@ -265,15 +255,6 @@ const tips = {
 .slide-left-leave-to {
   transform: translateX(-50px);
   opacity: 0;
-}
-
-.ch {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  @media (max-width: 600px) {
-    display: none;
-  }
 }
 
 // Alert
