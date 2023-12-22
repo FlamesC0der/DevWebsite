@@ -1,4 +1,5 @@
 @import url(reset.scss);
+@import url(snow.scss);
 
 :root {
   --background-transparent-color1: rgba(17, 17, 17, 0.6);
@@ -28,6 +29,7 @@ body {
   font-family: "Menlo", "Meslo LG", monospace;
   font-size: 14px;
   overflow-y: scroll;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   &::-webkit-scrollbar {
     background: #560aa269;
     height: 6px;
@@ -40,6 +42,8 @@ body {
     background-color: #9d0a89;
     border-radius: 8px;
   }
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 #app {
   max-width: 60rem;
