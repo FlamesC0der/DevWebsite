@@ -272,6 +272,7 @@ import Footer from '@/components/app/Footer.vue'
     animation: alert-animation 40s linear infinite;
     width: auto;
     text-wrap: nowrap;
+    max-height: 30px;
   }
 }
 
