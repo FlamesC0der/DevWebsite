@@ -270,7 +270,7 @@ import Footer from '@/components/app/Footer.vue'
     transform: translateX(100%);
     
     animation: alert-animation 40s linear infinite;
-    width: auto;
+    width: 1700px;
     text-wrap: nowrap;
     max-height: 30px;
   }
