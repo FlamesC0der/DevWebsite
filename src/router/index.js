@@ -86,6 +86,14 @@ const router = createRouter({
           }
         },
         {
+          path: 'yandexlmstools',
+          name: 'yandexlmstools',
+          component: () => import('@/views/Projects.vue'),
+          beforeEnter(to, from, next) {
+            window.location.href = "https://github.com/FlamesC0der/YandexLMSTools"
+          }
+        },
+        {
           path: 'pyrenju',
           name: 'pyrenju',
           component: () => import('@/views/Projects.vue'),

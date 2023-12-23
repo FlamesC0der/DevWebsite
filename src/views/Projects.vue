@@ -24,7 +24,13 @@ const projects = [
   {
     name: 'PyRenju',
     links: [
-      {text: 'source', link: 'projects/powercode-scanner', logo: 'social/github'}
+      {text: 'source', link: 'projects/pyrenju', logo: 'social/github'}
+    ]
+  },
+  {
+    name: "YandexLMSTools",
+    links: [
+      {text: 'source', link: 'projects/yandexlmstools', logo: 'social/github'}
     ]
   },
   {

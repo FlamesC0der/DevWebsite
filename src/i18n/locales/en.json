@@ -25,6 +25,7 @@
     "Webpack-simple": "Basic configured webpack",
     "PowerCode-Scanner": "QRCode scanner (Hackaton 2023) \"Моя профессия IT\"",
     "PyRenju": "Renju game",
+    "YandexLMSTools": "Yandex LMS chrome extension with some helpfull features",
     "PyGame": "Soon! (in 2024)"
   },
   "404": {
