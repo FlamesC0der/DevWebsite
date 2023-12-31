@@ -1,13 +1,13 @@
 <script setup>
 import { ref, onBeforeMount } from 'vue'
 
-const countDownDate = new Date('2024-01-01T00:00:00')
+const countDownDate = new Date('2023-12-31T18:48:00')
 let time = ref(new Date())
 let countdownValue = ref({
-  days: "??d",
-  hours: "??h",
-  minutes: "??m",
-  seconds: "??s"
+  days: "-",
+  hours: "-",
+  minutes: "-",
+  seconds: "-"
 })
 
 function timer() {
