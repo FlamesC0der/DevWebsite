@@ -3,7 +3,7 @@
 
 <template>
   <footer class="footer">
-    <div class="footer__copyright">Copyright © 2023 FlamesCoder</div>
+    <div class="footer__copyright">Copyright © 2024 FlamesCoder</div>
   </footer>
 </template>
 

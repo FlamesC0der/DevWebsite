@@ -50,7 +50,7 @@ onBeforeMount(() => {
       <h1 class="title">FlamesCoder</h1>
       {{ time.toLocaleTimeString() }}
     </div>
-    <div class="countdown">
+    <!-- <div class="countdown">
       <p class="countdown__title">{{ $t("home.countdown") }}</p>
       <div class="countdown__time">
         <div v-for="value in countdownValue" class="countdown__value">
@@ -59,7 +59,7 @@ onBeforeMount(() => {
           </Transition>
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
 
