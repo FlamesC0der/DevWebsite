@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onBeforeMount } from 'vue'
 
-const countDownDate = new Date('2023-12-31T18:48:00')
+const countDownDate = new Date('2024-01-01T00:00:00')
 let time = ref(new Date())
 let countdownValue = ref({
   days: "-",
@@ -116,10 +116,11 @@ onBeforeMount(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     background: #285dcf69;
     border-radius: 10px;
+    font-size: 18px;
   }
 }
 .countdown-transition-enter-active,
