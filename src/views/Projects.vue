@@ -34,7 +34,7 @@ const projects = [
     ]
   },
   {
-    name: 'PyGame',
+    name: 'PyOSU',
   },
 ]
 </script>
