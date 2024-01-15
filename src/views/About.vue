@@ -54,7 +54,7 @@ onBeforeMount(() => {
 <template>
   <section class="about">
     <div class="about__profile">
-      <img class="about__logo" src="@/assets/avatar.jpg" />
+      <img class="about__logo" src="@/assets/avatar.png" />
       <h2 class="about__name">FlamesCoder</h2>
     </div>
     <h3 class="title">{{ $t("about.about_me") }}</h3>
