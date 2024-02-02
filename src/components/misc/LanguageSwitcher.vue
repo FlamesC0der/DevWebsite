@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-import { useI18n } from 'vue-i18n'
+import {ref} from 'vue'
+import {useI18n} from 'vue-i18n'
 import Tr from "@/i18n/translation"
 import CountryFlag from 'vue-country-flag-next'
 import Icon from '@/components/common/Icon.vue'
@@ -11,7 +11,7 @@ const langs = [
   {lang: "en", text: "English", country: "gb"},
   {lang: "ja", text: "日本語", country: "jp"},
 ]
-const { locale } = useI18n()
+const {locale} = useI18n()
 const supportedLocales = Tr.supportedLocales
 
 function switchLanguage(i) {
@@ -23,11 +23,14 @@ function switchLanguage(i) {
 <template>
   <div class="switchLanguage" tabindex="-1" @blur="open = false">
     <div class="switchLanguage__selected" :class="{open: open}" @click="open = !open">
-      <Icon class="icon" name="globe" size="20px"/>{{ langs.find(x => x.lang === locale).text }}<Icon class="icon arrow" name="chevron-down" size="20px"/>
+      <Icon class="icon" name="globe" size="20px"/>
+      {{ langs.find(x => x.lang === locale).text }}
+      <Icon class="icon arrow" name="chevron-down" size="20px"/>
     </div>
     <div class="switchLanguage__items" :class="{selectHide: !open}">
       <div v-for="(option, i) of supportedLocales" :key="i" @click="switchLanguage(i)">
-        <country-flag :country="langs.find(x => x.lang === option).country" size='normal'/>{{ langs.find(x => x.lang === option).text }}
+        <country-flag :country="langs.find(x => x.lang === option).country" size='normal'/>
+        {{ langs.find(x => x.lang === option).text }}
       </div>
     </div>
   </div>
@@ -44,6 +47,7 @@ function switchLanguage(i) {
   border-radius: 5px;
   min-width: 110px;
   max-height: 44px;
+
   &__selected {
     display: flex;
     cursor: pointer;
@@ -52,6 +56,7 @@ function switchLanguage(i) {
     justify-content: space-around;
     align-items: center;
   }
+
   &__items {
     position: absolute;
     display: flex;
@@ -68,6 +73,7 @@ function switchLanguage(i) {
     border-bottom-right-radius: 15px;
     background-color: var(--background-transparent-color3);
     border: 2px solid var(--border-color-light1);
+
     div {
       display: flex;
       cursor: pointer;
@@ -78,12 +84,15 @@ function switchLanguage(i) {
     }
   }
 }
+
 .arrow {
   transition: transform .3s;
 }
+
 .open .arrow {
   transform: rotate(180deg);
 }
+
 .selectHide {
   display: none;
 }

@@ -18,12 +18,15 @@
   border-radius: 15px;
   padding: 10px;
   backdrop-filter: blur(5px);
+
   &__title {
     font-size: 2rem;
   }
+
   &__subtitle {
     color: var(--font-color-gray);
   }
+
   &__link {
     color: var(--font-color-green);
     transition: color .35s;

@@ -30,21 +30,26 @@ body {
   font-size: 14px;
   overflow-y: scroll;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+
   &::-webkit-scrollbar {
     background: #560aa269;
     height: 6px;
     width: 6px;
   }
+
   &::-webkit-scrollbar-button {
     display: none;
   }
+
   &::-webkit-scrollbar-thumb {
     background-color: #9d0a89;
     border-radius: 8px;
   }
+
   max-width: 100vw;
   overflow-x: hidden;
 }
+
 #app {
   max-width: 60rem;
   margin: 0 auto;

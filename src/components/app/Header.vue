@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-import { RouterLink } from 'vue-router';
+import {ref} from 'vue'
+import {RouterLink} from 'vue-router';
 import LanguageSwitcher from '@/components/misc/LanguageSwitcher.vue';
 import Icon from '@/components/common/Icon.vue'
 
@@ -15,14 +15,16 @@ const navs = [
 
 <template>
   <header class="header">
-    <button class="header__burger" @click="open = !open"><Icon class="icon" name="menu" size="50px"/></button>
+    <button class="header__burger" @click="open = !open">
+      <Icon class="icon" name="menu" size="50px"/>
+    </button>
     <nav class="nav" :class="{open: open}">
       <RouterLink v-for="nav in navs" class="nav__item" :to="nav.to" :key="nav.id" @click="open = !open">
         <Icon class="icon" :name="nav.icon" size="15px"/>
         <p class="nav__name">{{ $t(nav.text_key) }}</p>
       </RouterLink>
     </nav>
-    <LanguageSwitcher />
+    <LanguageSwitcher/>
   </header>
 </template>
 
@@ -37,6 +39,7 @@ const navs = [
   border: 2px solid var(--border-color-light1);
   border-radius: 15px;
   background: var(--background-transparent-color3);
+
   &__burger {
     display: none;
     text-align: left;
@@ -44,11 +47,13 @@ const navs = [
     max-height: 44px;
   }
 }
+
 .nav {
   display: flex;
   flex-direction: row;
   gap: 0.1rem;
   user-select: none;
+
   &__item {
     position: relative;
     display: flex;
@@ -57,15 +62,18 @@ const navs = [
     border-radius: 5px;
     padding: 0 10px;
     align-items: center;
+
     &:hover {
       background: var(--background-transparent-color2);
       transition: background .25s;
     }
   }
+
   &__name {
     font-size: 15px;
   }
 }
+
 .router-link-active::after {
   position: absolute;
   content: "";
@@ -76,6 +84,7 @@ const navs = [
   left: 0;
   right: 0;
 }
+
 @media (max-width: 600px) {
   .nav {
     display: none;

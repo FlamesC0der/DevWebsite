@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onBeforeMount } from 'vue'
+import {ref, onBeforeMount} from 'vue'
 
 const countDownDate = new Date('2024-01-01T00:00:00')
 let time = ref(new Date())
@@ -16,39 +16,47 @@ function timer() {
   }, 1000)
 }
 
-function countdown() {
-  const countdownInterval = setInterval(function() {
-    let now = new Date().getTime();
-    var distance = countDownDate - now;
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    if (distance > 0) {
-      countdownValue = {
-        days: days + "d",
-        hours: hours + "h",
-        minutes: minutes + "m",
-        seconds: seconds + "s"
-      }
-    } else {
-      clearInterval(countdownInterval)
-    }
-  })
-}
+// function countdown() {
+//   const countdownInterval = setInterval(function () {
+//     let now = new Date().getTime();
+//     var distance = countDownDate - now;
+//     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//     if (distance > 0) {
+//       countdownValue = {
+//         days: days + "d",
+//         hours: hours + "h",
+//         minutes: minutes + "m",
+//         seconds: seconds + "s"
+//       }
+//     } else {
+//       clearInterval(countdownInterval)
+//     }
+//   })
+// }
 
 onBeforeMount(() => {
   timer()
-  countdown()
+  // countdown()
 })
 </script>
 
 <template>
   <section class="home">
     <div class="home__top">
-      <img class="home__logo" src="@/assets/avatar.png" />
+      <img class="home__logo" src="@/assets/avatar.png"/>
       <h1 class="title">FlamesCoder</h1>
       {{ time.toLocaleTimeString() }}
+    </div>
+    <div class="plans">
+      <h2 class="title">Plans</h2>
+      <ul>
+        <li>Rewrite website</li>
+        <li>Learn C#</li>
+        <li>Create school project</li>
+      </ul>
     </div>
     <!-- <div class="countdown">
       <p class="countdown__title">{{ $t("home.countdown") }}</p>
@@ -64,12 +72,17 @@ onBeforeMount(() => {
 </template>
 
 <style lang="scss" scoped>
+ul {
+  list-style: circle;
+  padding: 10px 0 10px 20px;
+}
 .home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 2rem 0;
   gap: 5px;
+
   &__top {
     display: flex;
     padding: 20px;
@@ -84,12 +97,32 @@ onBeforeMount(() => {
     max-width: 40rem;
     gap: 5px;
   }
+
   &__logo {
     width: 100px;
     height: 100px;
     border-radius: 100%;
   }
 }
+
+.plans {
+  display: flex;
+  padding: 20px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background: var(--background-transparent-color1);
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 15px;
+
+  &__title {
+    font-size: 20px;
+    color: #893dcf;
+  }
+}
+
 .countdown {
   display: flex;
   padding: 20px;
@@ -103,15 +136,18 @@ onBeforeMount(() => {
   width: 100%;
   max-width: 40rem;
   gap: 10px;
+
   &__title {
     font-size: 20px;
     color: #893dcf;
   }
+
   &__time {
     display: flex;
     flex-direction: row;
     gap: 5px;
   }
+
   &__value {
     display: flex;
     justify-content: center;
@@ -123,14 +159,17 @@ onBeforeMount(() => {
     font-size: 18px;
   }
 }
+
 .countdown-transition-enter-active,
 .countdown-transition-leave-active {
-  transition: all 0.3s cubic-bezier(.42,.97,.52,1.49);
+  transition: all 0.3s cubic-bezier(.42, .97, .52, 1.49);
 }
+
 .countdown-transition-enter-from {
   transform: translateY(20px);
   opacity: 0;
 }
+
 .countdown-transition-leave-to {
   transform: translateY(-20px);
   opacity: 0;

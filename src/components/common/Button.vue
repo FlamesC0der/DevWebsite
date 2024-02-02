@@ -1,6 +1,7 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import {RouterLink, RouterView} from 'vue-router'
 import Icon from '@/components/common/Icon.vue'
+
 const props = defineProps({
   text: {
     type: String,
@@ -30,6 +31,7 @@ const props = defineProps({
   font-size: 1.25rem;
   user-select: none;
   border: 1px solid var(--border-color-light1);
+
   &__link {
     display: flex;
     justify-content: center;

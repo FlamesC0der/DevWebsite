@@ -35,13 +35,17 @@ const projects = [
   },
   {
     name: 'PyOSU',
+    links: [
+      {text: 'source', link: 'projects/pyosu', logo: 'social/github'}
+    ]
   },
 ]
 </script>
 
 <template>
   <section class="projects">
-    <Project v-for="project in projects" :name="project.name" :image="`/projects/${project.name}.png`" :links="project.links" :key="project.id"></Project>
+    <Project v-for="project in projects" :name="project.name" :image="`/projects/${project.name}.png`"
+             :links="project.links" :key="project.id"></Project>
     <Button class="projects__more" :text="$t(`projects.more`)" link="links/github" logo="social/github"/>
   </section>
 </template>
@@ -56,10 +60,12 @@ const projects = [
   border-radius: 15px;
   padding: 10px;
   backdrop-filter: blur(5px);
-  >div, button {
+
+  > div, button {
     border: 3px solid #bf0dde72;
     min-height: 10rem;
   }
+
   &__projects__more {
     background: var(--background-transparent-color2);
     border-radius: 15px;
@@ -67,6 +73,7 @@ const projects = [
     padding: 10px 15px;
   }
 }
+
 @media (max-width: 850px) {
   .projects {
     grid-template-columns: 1fr;

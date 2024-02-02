@@ -12,7 +12,8 @@ const links = [
   <section class="links">
     <h2 class="title">{{ $t("links.links_title") }}</h2>
     <div class="line"></div>
-    <Button class="links__button" v-for="button in links" :text="button.text" :link="button.link" :logo="button.logo" :key="button.id" />
+    <Button class="links__button" v-for="button in links" :text="button.text" :link="button.link" :logo="button.logo"
+            :key="button.id"/>
   </section>
 </template>
 
@@ -23,6 +24,7 @@ const links = [
   border-radius: 15px;
   padding: 10px;
   backdrop-filter: blur(5px);
+
   &__button {
     width: 100%;
     margin: 10px 0;
@@ -30,6 +32,7 @@ const links = [
     font-size: 2rem;
   }
 }
+
 .title {
   margin: 10px 0;
 }

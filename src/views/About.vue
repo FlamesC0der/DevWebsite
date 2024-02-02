@@ -1,6 +1,6 @@
 <script setup>
 import List from '@/components/common/List.vue';
-import { ref, onBeforeMount } from 'vue'
+import {ref, onBeforeMount} from 'vue'
 
 let age = ref(300)
 
@@ -54,7 +54,7 @@ onBeforeMount(() => {
 <template>
   <section class="about">
     <div class="about__profile">
-      <img class="about__logo" src="@/assets/avatar.png" />
+      <img class="about__logo" src="@/assets/avatar.png"/>
       <h2 class="about__name">FlamesCoder</h2>
     </div>
     <h3 class="title">{{ $t("about.about_me") }}</h3>
@@ -81,25 +81,30 @@ onBeforeMount(() => {
   border-radius: 15px;
   padding: 10px;
   backdrop-filter: blur(5px);
+
   &__profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   &__logo {
     width: 200px;
     height: 200px;
     border-radius: 100%;
   }
+
   &__name {
     font-size: 30px;
     color: var(--font-color-orange);
   }
+
   &__text {
     margin: 16px 0;
   }
 }
+
 .title {
   margin: 10px 0;
 }
