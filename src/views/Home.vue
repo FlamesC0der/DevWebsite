@@ -56,6 +56,7 @@ onBeforeMount(() => {
         <li>Rewrite website</li>
         <li>Learn C#</li>
         <li>Create school project</li>
+        <li>Cut a cactus =3</li>
       </ul>
     </div>
     <!-- <div class="countdown">
