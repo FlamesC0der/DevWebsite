@@ -51,13 +51,7 @@ onBeforeMount(() => {
       {{ time.toLocaleTimeString() }}
     </div>
     <div class="plans">
-      <h2 class="title">Plans</h2>
-      <ul>
-        <li>Rewrite website</li>
-        <li>Learn C#</li>
-        <li>Create school project</li>
-        <li>Cut a cactus =3</li>
-      </ul>
+      <span class="plans__title">New website soon</span>
     </div>
     <!-- <div class="countdown">
       <p class="countdown__title">{{ $t("home.countdown") }}</p>
@@ -119,7 +113,7 @@ ul {
   border-radius: 15px;
 
   &__title {
-    font-size: 20px;
+    font-size: 40px;
     color: #893dcf;
   }
 }
