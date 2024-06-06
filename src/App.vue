@@ -6,13 +6,13 @@ import Footer from '@/components/app/Footer.vue'
 
 <template>
   <div class="container">
-    <Header/>
+    <!-- <Header/> -->
     <RouterView v-slot="{ Component, route}">
       <Transition :name="route.meta.transition" mode="out-in">
         <component :is="Component"/>
       </Transition>
     </RouterView>
-    <Footer/>
+    <!-- <Footer/> -->
   </div>
 </template>
 
@@ -21,7 +21,7 @@ import Footer from '@/components/app/Footer.vue'
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
+  // padding-top: 1rem;
   min-height: 100vh;
   z-index: 1;
 }
